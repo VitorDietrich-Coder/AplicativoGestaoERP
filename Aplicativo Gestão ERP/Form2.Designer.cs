@@ -430,7 +430,6 @@
             this.Marca.Name = "Marca";
             this.Marca.Size = new System.Drawing.Size(262, 20);
             this.Marca.TabIndex = 2;
-            this.Marca.TextChanged += new System.EventHandler(this.Marca_TextChanged);
             // 
             // label2
             // 
@@ -447,7 +446,6 @@
             this.NomeProd.Name = "NomeProd";
             this.NomeProd.Size = new System.Drawing.Size(252, 20);
             this.NomeProd.TabIndex = 2;
-            this.NomeProd.TextChanged += new System.EventHandler(this.NomeProd_TextChanged);
             // 
             // label1
             // 
@@ -490,7 +488,6 @@
             this.PesquisaProduto.Name = "PesquisaProduto";
             this.PesquisaProduto.Size = new System.Drawing.Size(729, 17);
             this.PesquisaProduto.TabIndex = 1;
-            this.PesquisaProduto.TextChanged += new System.EventHandler(this.PesquisaProduto_TextChanged);
             this.PesquisaProduto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PesquisaProduto_KeyPress);
             // 
             // panel1
@@ -501,7 +498,7 @@
             this.panel1.Location = new System.Drawing.Point(2, 1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(774, 600);
-            this.panel1.TabIndex = 20;
+            this.panel1.TabIndex = 21;
             this.panel1.Visible = false;
             // 
             // button4
@@ -512,7 +509,6 @@
             this.button4.TabIndex = 3;
             this.button4.Text = "Cancelar";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -522,7 +518,6 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "Selecionar";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // dataGridView1
             // 
@@ -535,7 +530,6 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(768, 551);
             this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Form2
             // 

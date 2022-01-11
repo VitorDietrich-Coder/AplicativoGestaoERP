@@ -175,7 +175,6 @@ namespace Aplicativo_Gestão_ERP
             this.ConfSenhaCAD.PasswordChar = '*';
             this.ConfSenhaCAD.Size = new System.Drawing.Size(271, 26);
             this.ConfSenhaCAD.TabIndex = 9;
-            this.ConfSenhaCAD.TextChanged += new System.EventHandler(this.ConfSenhaCAD_TextChanged);
             // 
             // Senha
             // 
@@ -204,7 +203,6 @@ namespace Aplicativo_Gestão_ERP
             this.Nome.Name = "Nome";
             this.Nome.Size = new System.Drawing.Size(274, 26);
             this.Nome.TabIndex = 6;
-            this.Nome.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label4
             // 
@@ -314,7 +312,6 @@ namespace Aplicativo_Gestão_ERP
             this.EmailLOG.Name = "EmailLOG";
             this.EmailLOG.Size = new System.Drawing.Size(271, 26);
             this.EmailLOG.TabIndex = 2;
-            this.EmailLOG.TextChanged += new System.EventHandler(this.EmailLOG_TextChanged);
             // 
             // linkLabel1
             // 
@@ -346,7 +343,6 @@ namespace Aplicativo_Gestão_ERP
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(476, 365);
             this.panel2.TabIndex = 5;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel3
             // 
@@ -371,7 +367,6 @@ namespace Aplicativo_Gestão_ERP
             this.menuStrip1.Size = new System.Drawing.Size(1920, 24);
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // produtosToolStripMenuItem
             // 
@@ -562,7 +557,6 @@ namespace Aplicativo_Gestão_ERP
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

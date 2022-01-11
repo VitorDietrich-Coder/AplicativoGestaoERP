@@ -19,7 +19,6 @@ namespace Aplicativo_Gestão_ERP
             WindowState = FormWindowState.Maximized;
             panel3.Visible = false;
         }
-
         public void button1_Click(object sender, EventArgs e)
         { 
             if (!((String.IsNullOrWhiteSpace(Nome.Text)) || (String.IsNullOrWhiteSpace(Email.Text)) || (String.IsNullOrWhiteSpace(Senha.Text))))
@@ -57,7 +56,6 @@ namespace Aplicativo_Gestão_ERP
             controle.acessar(EmailLOG.Text, SenhaLOG.Text);
             Pega_Nome pega = new Pega_Nome();
             if (controle.mensagem.Equals(""))
-
             {
                 if (controle.tem)
                 {
@@ -77,68 +75,34 @@ namespace Aplicativo_Gestão_ERP
                 MessageBox.Show(controle.mensagem);
             }
         }
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void EmailLOG_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             panel1.Visible = true;
             panel2.Visible = false;
         }
-
         private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
             panel1.Visible = true;
             panel2.Visible = false;
         }
-
         private void label6_Click(object sender, EventArgs e)
         {
 
         }
-
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             
             panel1.Visible = false;
             panel2.Visible = true;
         }
-        private void ConfSenhaCAD_TextChanged(object sender, EventArgs e)
-        {
-        }
-       
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-           
-           
-        }
         private void cadastroDeProdutoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-     
             Form2 formao = new Form2();
-             
-
             formao.ShowDialog();
-        }     
+        }
     }
 }

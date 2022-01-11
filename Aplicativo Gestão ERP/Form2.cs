@@ -20,14 +20,6 @@ namespace Aplicativo_Gestão_ERP
             InitializeComponent();
         }
 
-        private void Form2_Load(object sender, EventArgs e)
-        {
-           
-
-        }
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-        }
         private void groupBox1_Enter(object sender, EventArgs e)
         {
         }
@@ -74,24 +66,11 @@ namespace Aplicativo_Gestão_ERP
                 panel1.Visible = true;
                 Pesquisaproduto pesquisa = new Pesquisaproduto();
                 dataGridView1.DataSource =  pesquisa.pesquisaproduto(PesquisaProduto.Text);
-
             }
         }
-        public void Marca_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        public void NomeProd_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void PesquisaProduto_TextChanged(object sender, EventArgs e)
-        {
-        }
-
+     
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
-
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -166,10 +145,7 @@ namespace Aplicativo_Gestão_ERP
         }
 
         private void Form2_FormClosing(object sender, FormClosingEventArgs e)
-        {
-           
-           
-           
+        {    
         }
         private void Form2_Load_1(object sender, EventArgs e)
         {
@@ -199,7 +175,6 @@ namespace Aplicativo_Gestão_ERP
 
         private void ExcluirProduto_Click(object sender, EventArgs e)
         {
-            
             ControlaProduto controla = new ControlaProduto();
 
             if (controla.acessa(label16.Text) == false)

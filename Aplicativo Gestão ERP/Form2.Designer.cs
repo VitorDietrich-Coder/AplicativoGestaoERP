@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.Cadastro = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.ExcluirProduto = new System.Windows.Forms.Button();
+            this.NovoProduto = new System.Windows.Forms.Button();
             this.Validade = new System.Windows.Forms.MaskedTextBox();
             this.DataSaida = new System.Windows.Forms.MaskedTextBox();
             this.DataEntrada = new System.Windows.Forms.MaskedTextBox();
@@ -67,8 +69,6 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.PesquisaProduto = new System.Windows.Forms.TextBox();
-            this.NovoProduto = new System.Windows.Forms.Button();
-            this.ExcluirProduto = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -130,6 +130,26 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cadastro";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // ExcluirProduto
+            // 
+            this.ExcluirProduto.Location = new System.Drawing.Point(195, 513);
+            this.ExcluirProduto.Name = "ExcluirProduto";
+            this.ExcluirProduto.Size = new System.Drawing.Size(100, 37);
+            this.ExcluirProduto.TabIndex = 12;
+            this.ExcluirProduto.Text = "Excluir Produto";
+            this.ExcluirProduto.UseVisualStyleBackColor = true;
+            this.ExcluirProduto.Click += new System.EventHandler(this.ExcluirProduto_Click);
+            // 
+            // NovoProduto
+            // 
+            this.NovoProduto.Location = new System.Drawing.Point(50, 512);
+            this.NovoProduto.Name = "NovoProduto";
+            this.NovoProduto.Size = new System.Drawing.Size(100, 38);
+            this.NovoProduto.TabIndex = 11;
+            this.NovoProduto.Text = "Novo Produto";
+            this.NovoProduto.UseVisualStyleBackColor = true;
+            this.NovoProduto.Click += new System.EventHandler(this.NovoProduto_Click);
             // 
             // Validade
             // 
@@ -472,26 +492,6 @@
             this.PesquisaProduto.TabIndex = 1;
             this.PesquisaProduto.TextChanged += new System.EventHandler(this.PesquisaProduto_TextChanged);
             this.PesquisaProduto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PesquisaProduto_KeyPress);
-            // 
-            // NovoProduto
-            // 
-            this.NovoProduto.Location = new System.Drawing.Point(50, 512);
-            this.NovoProduto.Name = "NovoProduto";
-            this.NovoProduto.Size = new System.Drawing.Size(100, 38);
-            this.NovoProduto.TabIndex = 11;
-            this.NovoProduto.Text = "Novo Produto";
-            this.NovoProduto.UseVisualStyleBackColor = true;
-            this.NovoProduto.Click += new System.EventHandler(this.NovoProduto_Click);
-            // 
-            // ExcluirProduto
-            // 
-            this.ExcluirProduto.Location = new System.Drawing.Point(195, 513);
-            this.ExcluirProduto.Name = "ExcluirProduto";
-            this.ExcluirProduto.Size = new System.Drawing.Size(100, 37);
-            this.ExcluirProduto.TabIndex = 12;
-            this.ExcluirProduto.Text = "Excluir Produto";
-            this.ExcluirProduto.UseVisualStyleBackColor = true;
-            this.ExcluirProduto.Click += new System.EventHandler(this.ExcluirProduto_Click);
             // 
             // panel1
             // 

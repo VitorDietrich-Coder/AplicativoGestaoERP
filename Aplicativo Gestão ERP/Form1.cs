@@ -126,25 +126,19 @@ namespace Aplicativo_Gestão_ERP
         private void ConfSenhaCAD_TextChanged(object sender, EventArgs e)
         {
         }
-        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
-        {
-
-        }
+       
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-
+           
+           
         }
         private void cadastroDeProdutoToolStripMenuItem_Click(object sender, EventArgs e)
         {
      
             Form2 formao = new Form2();
-            formao.Visible = true;
              
-        }
 
-        private void produtosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
+            formao.ShowDialog();
+        }     
     }
 }

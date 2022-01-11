@@ -22,6 +22,7 @@ namespace Aplicativo_Gestão_ERP
 
         private void Form2_Load(object sender, EventArgs e)
         {
+           
 
         }
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -30,7 +31,6 @@ namespace Aplicativo_Gestão_ERP
         private void groupBox1_Enter(object sender, EventArgs e)
         {
         }
-
         public void button1_Click(object sender, EventArgs e)
         {
             ImportaImagem import = new ImportaImagem(pictureBox1);
@@ -63,9 +63,7 @@ namespace Aplicativo_Gestão_ERP
         }
         private void label4_Click(object sender, EventArgs e)
         {
-
         }
-
 
         public void PesquisaProduto_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
@@ -169,10 +167,10 @@ namespace Aplicativo_Gestão_ERP
 
         private void Form2_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+           
+           
+           
         }
-
-
         private void Form2_Load_1(object sender, EventArgs e)
         {
             MinimizeBox = false;

@@ -75,8 +75,8 @@ namespace Aplicativo_Gestão_ERP
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             label10 = new System.Windows.Forms.Label();
             label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -380,7 +380,6 @@ namespace Aplicativo_Gestão_ERP
             this.produtosToolStripMenuItem.Name = "produtosToolStripMenuItem";
             this.produtosToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.produtosToolStripMenuItem.Text = "Produtos";
-            this.produtosToolStripMenuItem.Click += new System.EventHandler(this.produtosToolStripMenuItem_Click);
             // 
             // cadastroDeProdutoToolStripMenuItem
             // 
@@ -464,13 +463,13 @@ namespace Aplicativo_Gestão_ERP
             // lOGToolStripMenuItem
             // 
             this.lOGToolStripMenuItem.Name = "lOGToolStripMenuItem";
-            this.lOGToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.lOGToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.lOGToolStripMenuItem.Text = "Log";
             // 
             // posiçãoDeEstoqueToolStripMenuItem
             // 
             this.posiçãoDeEstoqueToolStripMenuItem.Name = "posiçãoDeEstoqueToolStripMenuItem";
-            this.posiçãoDeEstoqueToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.posiçãoDeEstoqueToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.posiçãoDeEstoqueToolStripMenuItem.Text = "Posição de Estoque";
             // 
             // preçopToolStripMenuItem
@@ -533,6 +532,14 @@ namespace Aplicativo_Gestão_ERP
             this.panel4.Size = new System.Drawing.Size(1349, 17);
             this.panel4.TabIndex = 8;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(44, 1);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(0, 13);
+            this.label12.TabIndex = 1;
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -541,14 +548,6 @@ namespace Aplicativo_Gestão_ERP
             this.label11.Size = new System.Drawing.Size(46, 13);
             this.label11.TabIndex = 0;
             this.label11.Text = "Usuário:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(44, 1);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(0, 13);
-            this.label12.TabIndex = 1;
             // 
             // Form1
             // 
@@ -603,8 +602,6 @@ namespace Aplicativo_Gestão_ERP
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem produtosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem movimentaçõesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem balançoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastrarEstoquesToolStripMenuItem;
@@ -626,6 +623,8 @@ namespace Aplicativo_Gestão_ERP
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
+        public System.Windows.Forms.MenuStrip menuStrip1;
+        public System.Windows.Forms.ToolStripMenuItem produtosToolStripMenuItem;
     }
 }
 

@@ -13,16 +13,13 @@ namespace Aplicativo_Gestão_ERP
         public String mensagem = "";
         public bool acessa(String cod)
         {
-            ValidaProduto codz = new ValidaProduto();
-            tem = codz.verificacod(cod);
-            if (codz.mensagem.Equals(""))
+            ValidaProduto validaproduto = new ValidaProduto();
+            tem = validaproduto.verificacod(cod);
+            if (validaproduto.mensagem.Equals(""))
             {
-
-                this.mensagem = codz.mensagem;
-
+                this.mensagem = validaproduto.mensagem;
             }
             return tem;
-
         }
         public String Cadastrar(String email)
         {

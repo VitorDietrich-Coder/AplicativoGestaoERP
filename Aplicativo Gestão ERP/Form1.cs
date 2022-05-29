@@ -64,6 +64,7 @@ namespace Aplicativo_Gestão_ERP
                     panel2.Visible = false;
                     panel3.Visible = true;
                     label12.Text = pega.Pega_Nome2(EmailLOG.Text);
+                    label13.Text = DateTime.Now.ToString("dd/MM/yyyy");
                 }
                 else
                 {

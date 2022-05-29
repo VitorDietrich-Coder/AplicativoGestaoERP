@@ -77,6 +77,8 @@ namespace Aplicativo_Gestão_ERP
             this.panel4 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.DataPanel = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             label10 = new System.Windows.Forms.Label();
             label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -520,6 +522,8 @@ namespace Aplicativo_Gestão_ERP
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.Controls.Add(this.label13);
+            this.panel4.Controls.Add(this.DataPanel);
             this.panel4.Controls.Add(this.label12);
             this.panel4.Controls.Add(this.label11);
             this.panel4.Location = new System.Drawing.Point(0, 711);
@@ -543,6 +547,23 @@ namespace Aplicativo_Gestão_ERP
             this.label11.Size = new System.Drawing.Size(46, 13);
             this.label11.TabIndex = 0;
             this.label11.Text = "Usuário:";
+            // 
+            // DataPanel
+            // 
+            this.DataPanel.AutoSize = true;
+            this.DataPanel.Location = new System.Drawing.Point(65, 1);
+            this.DataPanel.Name = "DataPanel";
+            this.DataPanel.Size = new System.Drawing.Size(33, 13);
+            this.DataPanel.TabIndex = 2;
+            this.DataPanel.Text = "Data:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(94, 1);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(0, 13);
+            this.label13.TabIndex = 3;
             // 
             // Form1
             // 
@@ -619,6 +640,8 @@ namespace Aplicativo_Gestão_ERP
         private System.Windows.Forms.Label label12;
         public System.Windows.Forms.MenuStrip menuStrip1;
         public System.Windows.Forms.ToolStripMenuItem produtosToolStripMenuItem;
+        private System.Windows.Forms.Label DataPanel;
+        private System.Windows.Forms.Label label13;
     }
 }
 

@@ -16,7 +16,7 @@ namespace Aplicativo_Gestão_ERP
         public  Conexao()
         {
 
-            Conn.ConnectionString = @"Data Source=LAPTOP-CE4Q030Q;Initial Catalog=GestEstoque;Integrated Security=True";
+            Conn.ConnectionString = @"Data Source=VITOR;Initial Catalog=GestEstoque;Integrated Security=True";
         }
 
         public SqlConnection conectar()

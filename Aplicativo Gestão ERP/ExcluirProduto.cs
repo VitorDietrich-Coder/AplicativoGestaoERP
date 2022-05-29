@@ -30,7 +30,6 @@ namespace Aplicativo_Gestão_ERP
             catch (Exception e)
             {
                 this.mensagem = "Erro de conexao";
-
             }
         }
     }

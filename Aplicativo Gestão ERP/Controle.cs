@@ -12,12 +12,12 @@ namespace Aplicativo_Gestão_ERP
         public String mensagem = "";
         public bool acessar(String email, String senha)
         {
-            Login login1 = new Login();
-            tem = login1.verificalogin(email, senha);
-            if (login1.mensagem.Equals(""))
+            Login login = new Login();
+            tem = login.verificalogin(email, senha);
+            if (login.mensagem.Equals(""))
             {
 
-                this.mensagem = login1.mensagem;
+                this.mensagem = login.mensagem;
 
             }
             return tem;

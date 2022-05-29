@@ -14,10 +14,9 @@ namespace Aplicativo_Gestão_ERP
 
         public string Pega_Nome2(string Email)
             {
-
             try
             {
-               
+
                 using (SqlConnection con = new SqlConnection(ConexaoGET.conn))
                 {
                     con.Open();

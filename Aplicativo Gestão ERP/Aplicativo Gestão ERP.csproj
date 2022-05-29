@@ -74,6 +74,12 @@
     <Compile Include="CadastrodeProduto.cs" />
     <Compile Include="Conexao.cs" />
     <Compile Include="ConexaoGET.cs" />
+    <Compile Include="Configuracoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuracoes.Designer.cs">
+      <DependentUpon>Configuracoes.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConnectionLogin.cs" />
     <Compile Include="Controlalogin.cs" />
     <Compile Include="ControlaProduto.cs" />
@@ -114,6 +120,9 @@
     <Compile Include="ValidaEmail.cs" />
     <Compile Include="ValidaProduto.cs" />
     <Compile Include="VerificaCad.cs" />
+    <EmbeddedResource Include="Configuracoes.resx">
+      <DependentUpon>Configuracoes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

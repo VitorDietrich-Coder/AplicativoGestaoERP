@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace Aplicativo_Gestão_ERP
 {
@@ -76,10 +77,6 @@ namespace Aplicativo_Gestão_ERP
                 MessageBox.Show(controle.mensagem);
             }
         }
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             panel1.Visible = true;
@@ -105,5 +102,14 @@ namespace Aplicativo_Gestão_ERP
             Form2 formao = new Form2();
             formao.ShowDialog();
         }
-    }
+        private void criardiretorio()
+        {
+                string folderPath = @"D:\MyFolder";
+                if (!Directory.Exists(folderPath))
+                {
+                    Directory.CreateDirectory(folderPath);
+                    Console.WriteLine(folderPath);
+                }
+            }
+        }
 }

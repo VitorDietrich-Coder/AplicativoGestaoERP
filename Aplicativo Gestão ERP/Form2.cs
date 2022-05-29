@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace Aplicativo_Gestão_ERP
-{
+{   
     public partial class Form2 : Form
     {
 
@@ -25,7 +25,7 @@ namespace Aplicativo_Gestão_ERP
         }
         public void button1_Click(object sender, EventArgs e)
         {
-            ImportaImagem import = new ImportaImagem(pictureBox1);
+           
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -75,7 +75,6 @@ namespace Aplicativo_Gestão_ERP
 
         private void button3_Click(object sender, EventArgs e)
         {
-
             int rowindex = dataGridView1.CurrentRow.Index;
 
             if (dataGridView1.SelectedRows.Count > 0)
@@ -155,6 +154,10 @@ namespace Aplicativo_Gestão_ERP
 
         private void NovoProduto_Click(object sender, EventArgs e)
         {
+            LimpaCampo();
+        }
+        private void LimpaCampo()
+        {
             label16.Text = "";
             NomeProd.Text = "";
             Marca.Text = "";
@@ -166,8 +169,8 @@ namespace Aplicativo_Gestão_ERP
             DataSaida.Text = "";
             PreçoCusto.Text = "";
             PreçoVenda.Text = "";
-        }
 
+        }
         private void button4_Click(object sender, EventArgs e)
         {
             panel1.Visible = false;
@@ -185,19 +188,14 @@ namespace Aplicativo_Gestão_ERP
             {
                 ExcluirProduto excluir = new ExcluirProduto(int.Parse(label16.Text));
                 MessageBox.Show("Produto excluido com sucesso");
-                label16.Text = "";
-                NomeProd.Text = "";
-                Marca.Text = "";
-                comboBox1.Text = "";
-                Peso.Text = "";
-                Quantidade.Text = "";
-                Validade.Text = "";
-                DataEntrada.Text = "";
-                DataSaida.Text = "";
-                PreçoCusto.Text = "";
-                PreçoVenda.Text = "";
+                LimpaCampo();
 
             }
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

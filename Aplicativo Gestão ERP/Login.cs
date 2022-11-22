@@ -20,7 +20,6 @@ namespace Aplicativo_Gestão_ERP
             cmd.CommandText = "select * from CadUser where email = @email and senha = @senha";
             cmd.Parameters.AddWithValue("@email", email);
             cmd.Parameters.AddWithValue("@senha", senha);
-
             try
             {
                 cmd.Connection = con.conectar();

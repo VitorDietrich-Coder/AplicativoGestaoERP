@@ -539,7 +539,7 @@
             this.MinimumSize = new System.Drawing.Size(1054, 778);
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastro de Produto";
+            this.Text = "Lista Produtos";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_FormClosing);
             this.Load += new System.EventHandler(this.Form2_Load_1);
             this.Cadastro.ResumeLayout(false);

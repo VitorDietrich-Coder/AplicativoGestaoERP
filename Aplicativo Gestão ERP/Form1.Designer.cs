@@ -75,6 +75,8 @@ namespace Aplicativo_Gestão_ERP
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.DataPanel = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             label10 = new System.Windows.Forms.Label();
@@ -225,7 +227,6 @@ namespace Aplicativo_Gestão_ERP
             this.label1.Size = new System.Drawing.Size(51, 20);
             this.label1.TabIndex = 4;
             this.label1.Text = "Nome";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label3
             // 
@@ -242,7 +243,7 @@ namespace Aplicativo_Gestão_ERP
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(112, 156);
+            this.label2.Location = new System.Drawing.Point(112, 152);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 20);
@@ -520,12 +521,31 @@ namespace Aplicativo_Gestão_ERP
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.Controls.Add(this.label13);
+            this.panel4.Controls.Add(this.DataPanel);
             this.panel4.Controls.Add(this.label12);
             this.panel4.Controls.Add(this.label11);
             this.panel4.Location = new System.Drawing.Point(0, 711);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1349, 17);
             this.panel4.TabIndex = 8;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(94, 1);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(0, 13);
+            this.label13.TabIndex = 3;
+            // 
+            // DataPanel
+            // 
+            this.DataPanel.AutoSize = true;
+            this.DataPanel.Location = new System.Drawing.Point(65, 1);
+            this.DataPanel.Name = "DataPanel";
+            this.DataPanel.Size = new System.Drawing.Size(33, 13);
+            this.DataPanel.TabIndex = 2;
+            this.DataPanel.Text = "Data:";
             // 
             // label12
             // 
@@ -551,9 +571,9 @@ namespace Aplicativo_Gestão_ERP
             this.ClientSize = new System.Drawing.Size(1350, 729);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -619,6 +639,8 @@ namespace Aplicativo_Gestão_ERP
         private System.Windows.Forms.Label label12;
         public System.Windows.Forms.MenuStrip menuStrip1;
         public System.Windows.Forms.ToolStripMenuItem produtosToolStripMenuItem;
+        private System.Windows.Forms.Label DataPanel;
+        private System.Windows.Forms.Label label13;
     }
 }
 

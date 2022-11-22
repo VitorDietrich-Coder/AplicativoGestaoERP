@@ -8,7 +8,6 @@ namespace Aplicativo_Gestão_ERP
 {
     public class Controlalogin
     { 
-
         public bool tem;
         public String mensagem = "";
         public bool acessa(String email)
@@ -19,7 +18,6 @@ namespace Aplicativo_Gestão_ERP
             {
 
                 this.mensagem = login1.mensagem;
-
             }
             return tem;
 

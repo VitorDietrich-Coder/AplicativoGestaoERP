@@ -19,7 +19,8 @@ namespace Aplicativo_Gestão_ERP
                     
 
                     con.Open();
-                    var sqlquery = "Select * From CadProduto Where Cód = " + cod;
+                    var sqlquery = "Select * From CadProduto where Cód like '%" + cod + "' or Nome Like '%" + cod + "'";
+
 
 
                     using (SqlDataAdapter da = new SqlDataAdapter(sqlquery, con))

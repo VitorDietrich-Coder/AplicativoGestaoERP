@@ -10,7 +10,7 @@ namespace Aplicativo_Gestão_ERP
 {
     public  class Pesquisaproduto
     {
-        public object pesquisaproduto(string cód)
+        public object pesquisaproduto(string cod)
         {
             try
             {
@@ -19,7 +19,7 @@ namespace Aplicativo_Gestão_ERP
                     
 
                     con.Open();
-                    var sqlquery = "Select * From CadProduto Where Cód = " + cód;
+                    var sqlquery = "Select * From CadProduto Where Cód = " + cod;
 
 
                     using (SqlDataAdapter da = new SqlDataAdapter(sqlquery, con))
@@ -34,9 +34,6 @@ namespace Aplicativo_Gestão_ERP
             }
             finally
             { }
-
-
-
         }
     }
 }

@@ -13,7 +13,7 @@ namespace Aplicativo_Gestão_ERP
     {
         public  ImportaImagem(PictureBox picture2)
         {
-            PictureBox picture = new PictureBox();
+            
             var fileContent = string.Empty;
             var filePath = string.Empty;
 

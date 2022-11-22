@@ -13,6 +13,7 @@ namespace Aplicativo_Gestão_ERP
 {
     public partial class Form1 : Form
     {
+       
         public Form1()
         {
             InitializeComponent();
@@ -20,7 +21,7 @@ namespace Aplicativo_Gestão_ERP
             panel3.Visible = false;
         }
         public void button1_Click(object sender, EventArgs e)
-        { 
+        {
             if (!((String.IsNullOrWhiteSpace(Nome.Text)) || (String.IsNullOrWhiteSpace(Email.Text)) || (String.IsNullOrWhiteSpace(Senha.Text))))
             {
                 Controlalogin control = new Controlalogin();
@@ -30,19 +31,19 @@ namespace Aplicativo_Gestão_ERP
                 {
                     MessageBox.Show("Digite um valor valido");
                 }
-                else 
-                {
-                if (Senha.Text == ConfSenhaCAD.Text)
-                {
-                    CAD cadson = new CAD(Nome.Text, Email.Text, Senha.Text);
-                    MessageBox.Show(cadson.mensagem);
-                    panel1.Visible = false;
-                    panel2.Visible = true;
-                }
                 else
                 {
-                    MessageBox.Show("As senha não coincidem");
-                }
+                    if (Senha.Text == ConfSenhaCAD.Text)
+                    {
+                        CAD cadson = new CAD(Nome.Text, Email.Text, Senha.Text);
+                        MessageBox.Show(cadson.mensagem);
+                        panel1.Visible = false;
+                        panel2.Visible = true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("As senha não coincidem");
+                    }
                 }
             }
             else
@@ -95,14 +96,13 @@ namespace Aplicativo_Gestão_ERP
         }
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            
             panel1.Visible = false;
             panel2.Visible = true;
         }
         private void cadastroDeProdutoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form2 formao = new Form2();
-            formao.ShowDialog();
+            Form2 forms = new Form2();
+            forms.ShowDialog();
         }
     }
 }

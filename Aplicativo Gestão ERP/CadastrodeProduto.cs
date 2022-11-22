@@ -9,7 +9,7 @@ namespace Aplicativo_Gestão_ERP
 {
     public class CadastrodeProduto
     {
-      
+   
         SqlCommand cmd = new SqlCommand();
         Conexao conexao = new Conexao();
         public string mensagem;
@@ -26,6 +26,7 @@ namespace Aplicativo_Gestão_ERP
             cmd.Parameters.AddWithValue("@DataVenda", DataVenda);
             cmd.Parameters.AddWithValue("@PreçoCusto", PreçoCusto);
             cmd.Parameters.AddWithValue("@PreçoVenda", PreçoVenda);
+
             try
             {
                 cmd.Connection = conexao.conectar();

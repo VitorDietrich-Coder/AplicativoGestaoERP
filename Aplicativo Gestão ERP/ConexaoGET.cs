@@ -8,7 +8,7 @@ namespace Aplicativo_Gestão_ERP
 {
     class ConexaoGET
     {
-        private static string server = @"VITOR";
+        private static string server = @".";
         private static string database = "GestEstoque";
 
         public static string conn

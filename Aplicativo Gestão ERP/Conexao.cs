@@ -11,13 +11,7 @@ namespace Aplicativo_Gestão_ERP
         public  class Conexao
         {
 
-        SqlConnection Conn = new SqlConnection();
-
-        public  Conexao()
-        {
-
-            Conn.ConnectionString = @"Data Source=VITOR;Initial Catalog=GestEstoque;Integrated Security=True";
-        }
+        SqlConnection Conn = new SqlConnection(ConexaoGET.conn);
 
         public SqlConnection conectar()
         {

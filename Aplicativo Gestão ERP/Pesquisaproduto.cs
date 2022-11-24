@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Aplicativo_Gestão_ERP
 {
-    public  class Pesquisaproduto
+    public  class PesquisaProduto
     {
         public object pesquisaproduto(string cod)
         {

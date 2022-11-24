@@ -56,7 +56,7 @@ namespace Aplicativo_Gestão_ERP
         {
             Controle controle = new Controle();
             controle.acessar(EmailLOG.Text, SenhaLOG.Text);
-            Pega_Nome pega = new Pega_Nome();
+            BuscaNome pega = new BuscaNome();
             if (controle.mensagem.Equals(""))
             {
                 if (controle.tem)

@@ -9,7 +9,7 @@ namespace Aplicativo_Gestão_ERP
   public class Controle
     {
         public bool tem;
-        public String mensagem = "";
+        public string mensagem = "";
         public bool acessar(String email, String senha)
         {
             Login login = new Login();

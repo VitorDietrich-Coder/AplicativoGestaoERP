@@ -69,6 +69,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.PesquisaProduto = new System.Windows.Forms.TextBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.Cadastro.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -81,7 +82,7 @@
             this.Cadastro.Controls.Add(this.tabPage1);
             this.Cadastro.Controls.Add(this.tabPage2);
             this.Cadastro.Location = new System.Drawing.Point(3, 27);
-            this.Cadastro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Cadastro.Margin = new System.Windows.Forms.Padding(4);
             this.Cadastro.Name = "Cadastro";
             this.Cadastro.SelectedIndex = 0;
             this.Cadastro.Size = new System.Drawing.Size(1037, 713);
@@ -119,9 +120,9 @@
             this.tabPage1.Controls.Add(this.NomeProd);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage1.Size = new System.Drawing.Size(1029, 684);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cadastro";
@@ -130,7 +131,7 @@
             // ExcluirProduto
             // 
             this.ExcluirProduto.Location = new System.Drawing.Point(260, 631);
-            this.ExcluirProduto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ExcluirProduto.Margin = new System.Windows.Forms.Padding(4);
             this.ExcluirProduto.Name = "ExcluirProduto";
             this.ExcluirProduto.Size = new System.Drawing.Size(133, 46);
             this.ExcluirProduto.TabIndex = 12;
@@ -141,7 +142,7 @@
             // NovoProduto
             // 
             this.NovoProduto.Location = new System.Drawing.Point(67, 630);
-            this.NovoProduto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NovoProduto.Margin = new System.Windows.Forms.Padding(4);
             this.NovoProduto.Name = "NovoProduto";
             this.NovoProduto.Size = new System.Drawing.Size(133, 47);
             this.NovoProduto.TabIndex = 11;
@@ -152,7 +153,7 @@
             // Validade
             // 
             this.Validade.Location = new System.Drawing.Point(817, 153);
-            this.Validade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Validade.Margin = new System.Windows.Forms.Padding(4);
             this.Validade.Mask = "00/00/0000";
             this.Validade.Name = "Validade";
             this.Validade.Size = new System.Drawing.Size(153, 22);
@@ -162,7 +163,7 @@
             // DataSaida
             // 
             this.DataSaida.Location = new System.Drawing.Point(260, 224);
-            this.DataSaida.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DataSaida.Margin = new System.Windows.Forms.Padding(4);
             this.DataSaida.Mask = "00/00/0000";
             this.DataSaida.Name = "DataSaida";
             this.DataSaida.Size = new System.Drawing.Size(132, 22);
@@ -172,7 +173,7 @@
             // DataEntrada
             // 
             this.DataEntrada.Location = new System.Drawing.Point(55, 224);
-            this.DataEntrada.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DataEntrada.Margin = new System.Windows.Forms.Padding(4);
             this.DataEntrada.Mask = "00/00/0000";
             this.DataEntrada.Name = "DataEntrada";
             this.DataEntrada.Size = new System.Drawing.Size(144, 22);
@@ -191,7 +192,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(628, 630);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(148, 47);
             this.button1.TabIndex = 6;
@@ -202,7 +203,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(817, 630);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(152, 47);
             this.button2.TabIndex = 6;
@@ -219,9 +220,9 @@
             this.groupBox1.Controls.Add(this.Minimo);
             this.groupBox1.Controls.Add(this.ControlaEstoque);
             this.groupBox1.Location = new System.Drawing.Point(57, 309);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(915, 314);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
@@ -231,7 +232,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(560, 16);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(347, 290);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -263,7 +264,7 @@
             // Maximo
             // 
             this.Maximo.Location = new System.Drawing.Point(59, 172);
-            this.Maximo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Maximo.Margin = new System.Windows.Forms.Padding(4);
             this.Maximo.Name = "Maximo";
             this.Maximo.Size = new System.Drawing.Size(251, 22);
             this.Maximo.TabIndex = 3;
@@ -271,7 +272,7 @@
             // Minimo
             // 
             this.Minimo.Location = new System.Drawing.Point(59, 107);
-            this.Minimo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Minimo.Margin = new System.Windows.Forms.Padding(4);
             this.Minimo.Name = "Minimo";
             this.Minimo.Size = new System.Drawing.Size(251, 22);
             this.Minimo.TabIndex = 3;
@@ -281,7 +282,7 @@
             this.ControlaEstoque.AutoSize = true;
             this.ControlaEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ControlaEstoque.Location = new System.Drawing.Point(63, 44);
-            this.ControlaEstoque.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ControlaEstoque.Margin = new System.Windows.Forms.Padding(4);
             this.ControlaEstoque.Name = "ControlaEstoque";
             this.ControlaEstoque.Size = new System.Drawing.Size(160, 24);
             this.ControlaEstoque.TabIndex = 2;
@@ -299,7 +300,7 @@
             "Praveen Kumar",
             "Raj Beniwal"});
             this.comboBox1.Location = new System.Drawing.Point(55, 153);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(144, 24);
             this.comboBox1.TabIndex = 4;
@@ -341,7 +342,7 @@
             // Quantidade
             // 
             this.Quantidade.Location = new System.Drawing.Point(267, 153);
-            this.Quantidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Quantidade.Margin = new System.Windows.Forms.Padding(4);
             this.Quantidade.Name = "Quantidade";
             this.Quantidade.Size = new System.Drawing.Size(125, 22);
             this.Quantidade.TabIndex = 2;
@@ -359,7 +360,7 @@
             // PreçoVenda
             // 
             this.PreçoVenda.Location = new System.Drawing.Point(617, 224);
-            this.PreçoVenda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PreçoVenda.Margin = new System.Windows.Forms.Padding(4);
             this.PreçoVenda.Name = "PreçoVenda";
             this.PreçoVenda.Size = new System.Drawing.Size(149, 22);
             this.PreçoVenda.TabIndex = 2;
@@ -377,7 +378,7 @@
             // PreçoCusto
             // 
             this.PreçoCusto.Location = new System.Drawing.Point(817, 224);
-            this.PreçoCusto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PreçoCusto.Margin = new System.Windows.Forms.Padding(4);
             this.PreçoCusto.Name = "PreçoCusto";
             this.PreçoCusto.Size = new System.Drawing.Size(151, 22);
             this.PreçoCusto.TabIndex = 2;
@@ -405,7 +406,7 @@
             // Peso
             // 
             this.Peso.Location = new System.Drawing.Point(620, 153);
-            this.Peso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Peso.Margin = new System.Windows.Forms.Padding(4);
             this.Peso.Name = "Peso";
             this.Peso.Size = new System.Drawing.Size(155, 22);
             this.Peso.TabIndex = 2;
@@ -455,7 +456,7 @@
             // Marca
             // 
             this.Marca.Location = new System.Drawing.Point(620, 80);
-            this.Marca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Marca.Margin = new System.Windows.Forms.Padding(4);
             this.Marca.Name = "Marca";
             this.Marca.Size = new System.Drawing.Size(348, 22);
             this.Marca.TabIndex = 2;
@@ -473,7 +474,7 @@
             // NomeProd
             // 
             this.NomeProd.Location = new System.Drawing.Point(57, 80);
-            this.NomeProd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NomeProd.Margin = new System.Windows.Forms.Padding(4);
             this.NomeProd.Name = "NomeProd";
             this.NomeProd.Size = new System.Drawing.Size(335, 22);
             this.NomeProd.TabIndex = 2;
@@ -492,9 +493,9 @@
             // tabPage2
             // 
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage2.Size = new System.Drawing.Size(1029, 684);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Informações fiscais";
@@ -507,7 +508,7 @@
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(3, 1);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(52, 25);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -519,11 +520,15 @@
             this.PesquisaProduto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.PesquisaProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PesquisaProduto.Location = new System.Drawing.Point(63, 4);
-            this.PesquisaProduto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PesquisaProduto.Margin = new System.Windows.Forms.Padding(4);
             this.PesquisaProduto.Name = "PesquisaProduto";
             this.PesquisaProduto.Size = new System.Drawing.Size(972, 22);
             this.PesquisaProduto.TabIndex = 1;
             this.PesquisaProduto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PesquisaProduto_KeyPress);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // Form2
             // 
@@ -534,7 +539,7 @@
             this.Controls.Add(this.PesquisaProduto);
             this.Controls.Add(this.Cadastro);
             this.ForeColor = System.Drawing.Color.Black;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximumSize = new System.Drawing.Size(1054, 778);
             this.MinimumSize = new System.Drawing.Size(1054, 778);
             this.Name = "Form2";
@@ -596,5 +601,6 @@
         public System.Windows.Forms.MaskedTextBox Validade;
         private System.Windows.Forms.Button NovoProduto;
         public System.Windows.Forms.Button ExcluirProduto;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

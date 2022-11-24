@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Aplicativo_Gestão_ERP
 {
-    public class Pega_Nome
+    public class BuscaNome
     {
         public string Nome { get; set; }
 
@@ -28,7 +28,7 @@ namespace Aplicativo_Gestão_ERP
                     SqlDataReader dr = cmd.ExecuteReader();
                     while (dr.Read())
                     {
-                        Pega_Nome c = new Pega_Nome();
+                        BuscaNome c = new BuscaNome();
                         c.Nome = dr["Nome"].ToString();
 
                         lista = c.Nome;

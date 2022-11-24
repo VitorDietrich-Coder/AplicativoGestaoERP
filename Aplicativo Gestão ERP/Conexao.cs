@@ -10,7 +10,6 @@ namespace Aplicativo_Gestão_ERP
 {
         public  class Conexao
         {
-
         SqlConnection Conn = new SqlConnection(ConexaoGET.conn);
 
         public SqlConnection conectar()
@@ -30,7 +29,6 @@ namespace Aplicativo_Gestão_ERP
 
             }
             return Conn;
-
         }
     }
 }

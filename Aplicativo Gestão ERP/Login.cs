@@ -9,14 +9,15 @@ namespace Aplicativo_Gestão_ERP
 {
     public class Login
     {
-        public bool tem;
-        public String mensagem = "";
-
-        SqlCommand cmd = new SqlCommand();
-        Conexao con = new Conexao();
-        SqlDataReader dr;
+        private bool tem;
+        public string mensagem = "";
         public bool verificalogin(String email, String senha)
         {
+
+            SqlCommand cmd = new SqlCommand();
+            Conexao con = new Conexao();
+            SqlDataReader dr;
+
             cmd.CommandText = "select * from CadUser where email = @email and senha = @senha";
             cmd.Parameters.AddWithValue("@email", email);
             cmd.Parameters.AddWithValue("@senha", senha);

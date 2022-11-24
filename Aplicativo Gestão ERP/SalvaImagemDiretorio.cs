@@ -1,33 +1,41 @@
 ﻿using Grpc.Core;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Aplicativo_Gestão_ERP
 {
-    internal class SalvaImagemDiretorio
+    public class SalvaImagemDiretorio
     {
         private string strCaminho;
         private string strNovaPasta;
         private string strTitulo;
 
-        private void salvaImagem()
+        public void salvaImagem(string filename)
         {
-            if (Directory.Exists(strTitulo))
+            SqlCommand cmd = new SqlCommand();
+            Conexao con = new Conexao();
+            SqlDataReader dr;
+
+            try
             {
-                //pegando caminho dentro do projeto
-               // strCaminho = Server.MapPath("/Fotos");
-      
-                strNovaPasta = Path.Combine(strCaminho, strTitulo);
-
-                //criando diretorio
-                Directory.CreateDirectory(@"" + strNovaPasta + "");
+                cmd.Parameters.Clear();
+                cmd.CommandText = "update CadProduto set CaminhoImagem = @CAMINHO";
+                cmd.Parameters.AddWithValue("CAMINHO", filename);
+                cmd.Connection = con.conectar();
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Imagem cadastrada com sucesso!");
             }
-
-
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
+
     }
 }

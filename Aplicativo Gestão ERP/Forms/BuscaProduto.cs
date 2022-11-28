@@ -17,16 +17,17 @@ namespace Aplicativo_Gestão_ERP
             InitializeComponent();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        public void FinalizaForms()
         {
-
+            BuscaProduto buscaProduto = new BuscaProduto();
+            buscaProduto.Close();
+            buscaProduto.Visible = false;       
         }
-
         private void button3_Click_1(object sender, EventArgs e)
         {
-             Form2 form2 = new Form2();
-             form2.PreencheValores(dataGridView1);
-             Close(); 
-                }
-            }
+            PreencheValores preencheValores = new PreencheValores();
+            preencheValores.preencheLabel(dataGridView1);
+            Close();
         }
+      }
+   }

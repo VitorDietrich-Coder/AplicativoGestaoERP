@@ -120,6 +120,7 @@
     <Compile Include="Login.cs" />
     <Compile Include="BuscaNome.cs" />
     <Compile Include="PesquisaProduto.cs" />
+    <Compile Include="PreencheValores.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RespeitaQuant.cs" />

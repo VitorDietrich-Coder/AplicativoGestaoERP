@@ -12,10 +12,6 @@ namespace Aplicativo_Gestão_ERP
 {
     public class SalvaImagemDiretorio
     {
-        private string strCaminho;
-        private string strNovaPasta;
-        private string strTitulo;
-
         public void salvaImagem(string filename)
         {
             SqlCommand cmd = new SqlCommand();
@@ -25,7 +21,7 @@ namespace Aplicativo_Gestão_ERP
             try
             {
                 cmd.Parameters.Clear();
-                cmd.CommandText = "update CadProduto set CaminhoImagem = @CAMINHO";
+                cmd.CommandText = "update CadProduto set CaminhoImagem = @CAMINHO where Código = @CODIGO";
                 cmd.Parameters.AddWithValue("CAMINHO", filename);
                 cmd.Connection = con.conectar();
                 cmd.ExecuteNonQuery();
@@ -36,6 +32,32 @@ namespace Aplicativo_Gestão_ERP
                 MessageBox.Show(ex.Message);
             }
         }
+        public string buscaImagem(int codigo)
+        {
+            SqlCommand cmd = new SqlCommand();
+            Conexao con = new Conexao();
+            var caminho = string.Empty; 
+            try
+            {
+                cmd.Parameters.Clear();
+                cmd.CommandText = "Select CaminhoImagem from CadProduto where Cód = @CODIGO";
+                cmd.Parameters.AddWithValue("CODIGO", codigo);
+                cmd.Connection = con.conectar();
+                cmd.ExecuteNonQuery();
 
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                   caminho =  dr["CaminhoImagem"].ToString().Replace(@"\\", @"\");
+
+                }
+                return caminho;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return caminho;
+        }
     }
 }

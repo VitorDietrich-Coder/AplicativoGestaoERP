@@ -583,7 +583,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label16;
         public System.Windows.Forms.TextBox Quantidade;
         public System.Windows.Forms.TextBox Maximo;
         public System.Windows.Forms.TextBox Minimo;
@@ -602,5 +601,6 @@
         private System.Windows.Forms.Button NovoProduto;
         public System.Windows.Forms.Button ExcluirProduto;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        public System.Windows.Forms.Label label16;
     }
 }

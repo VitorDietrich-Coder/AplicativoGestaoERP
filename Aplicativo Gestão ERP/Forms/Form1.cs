@@ -14,7 +14,7 @@ namespace Aplicativo_Gestão_ERP
 {
     public partial class Form1 : Form
     {
-       
+        Form2 form2 = new Form2();
         public Form1()
         {
             InitializeComponent();
@@ -100,8 +100,7 @@ namespace Aplicativo_Gestão_ERP
         }
         private void cadastroDeProdutoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form2 forms = new Form2();
-            forms.ShowDialog();
+            form2.Show();
         }
         private void criardiretorio()
         {

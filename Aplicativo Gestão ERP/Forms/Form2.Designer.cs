@@ -36,7 +36,7 @@
             this.Validade = new System.Windows.Forms.MaskedTextBox();
             this.DataSaida = new System.Windows.Forms.MaskedTextBox();
             this.DataEntrada = new System.Windows.Forms.MaskedTextBox();
-            this.label16 = new System.Windows.Forms.Label();
+            this.Id = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -52,9 +52,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.Quantidade = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.PreçoVenda = new System.Windows.Forms.TextBox();
+            this.PrecoVenda = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.PreçoCusto = new System.Windows.Forms.TextBox();
+            this.PrecoCusto = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.Peso = new System.Windows.Forms.TextBox();
@@ -70,11 +70,17 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.PesquisaProduto = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.painelPesquisa = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button4 = new System.Windows.Forms.Button();
+            this.selecionar = new System.Windows.Forms.Button();
             this.Cadastro.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.painelPesquisa.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // Cadastro
@@ -85,7 +91,7 @@
             this.Cadastro.Margin = new System.Windows.Forms.Padding(4);
             this.Cadastro.Name = "Cadastro";
             this.Cadastro.SelectedIndex = 0;
-            this.Cadastro.Size = new System.Drawing.Size(1037, 713);
+            this.Cadastro.Size = new System.Drawing.Size(1037, 720);
             this.Cadastro.TabIndex = 0;
             // 
             // tabPage1
@@ -95,7 +101,7 @@
             this.tabPage1.Controls.Add(this.Validade);
             this.tabPage1.Controls.Add(this.DataSaida);
             this.tabPage1.Controls.Add(this.DataEntrada);
-            this.tabPage1.Controls.Add(this.label16);
+            this.tabPage1.Controls.Add(this.Id);
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.groupBox1);
@@ -105,9 +111,9 @@
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.Quantidade);
             this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.PreçoVenda);
+            this.tabPage1.Controls.Add(this.PrecoVenda);
             this.tabPage1.Controls.Add(this.label11);
-            this.tabPage1.Controls.Add(this.PreçoCusto);
+            this.tabPage1.Controls.Add(this.PrecoCusto);
             this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Controls.Add(this.Peso);
@@ -123,7 +129,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Size = new System.Drawing.Size(1029, 684);
+            this.tabPage1.Size = new System.Drawing.Size(1029, 691);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Cadastro";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -180,14 +186,14 @@
             this.DataEntrada.TabIndex = 8;
             this.DataEntrada.ValidatingType = typeof(System.DateTime);
             // 
-            // label16
+            // Id
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(100, 17);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(0, 16);
-            this.label16.TabIndex = 7;
+            this.Id.AutoSize = true;
+            this.Id.Location = new System.Drawing.Point(100, 17);
+            this.Id.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Id.Name = "Id";
+            this.Id.Size = new System.Drawing.Size(0, 16);
+            this.Id.TabIndex = 7;
             // 
             // button1
             // 
@@ -357,13 +363,13 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "Quantidade:";
             // 
-            // PreçoVenda
+            // PrecoVenda
             // 
-            this.PreçoVenda.Location = new System.Drawing.Point(617, 224);
-            this.PreçoVenda.Margin = new System.Windows.Forms.Padding(4);
-            this.PreçoVenda.Name = "PreçoVenda";
-            this.PreçoVenda.Size = new System.Drawing.Size(149, 22);
-            this.PreçoVenda.TabIndex = 2;
+            this.PrecoVenda.Location = new System.Drawing.Point(620, 224);
+            this.PrecoVenda.Margin = new System.Windows.Forms.Padding(4);
+            this.PrecoVenda.Name = "PrecoVenda";
+            this.PrecoVenda.Size = new System.Drawing.Size(149, 22);
+            this.PrecoVenda.TabIndex = 2;
             // 
             // label11
             // 
@@ -375,13 +381,13 @@
             this.label11.TabIndex = 1;
             this.label11.Text = "Preço de Venda:";
             // 
-            // PreçoCusto
+            // PrecoCusto
             // 
-            this.PreçoCusto.Location = new System.Drawing.Point(817, 224);
-            this.PreçoCusto.Margin = new System.Windows.Forms.Padding(4);
-            this.PreçoCusto.Name = "PreçoCusto";
-            this.PreçoCusto.Size = new System.Drawing.Size(151, 22);
-            this.PreçoCusto.TabIndex = 2;
+            this.PrecoCusto.Location = new System.Drawing.Point(817, 224);
+            this.PrecoCusto.Margin = new System.Windows.Forms.Padding(4);
+            this.PrecoCusto.Name = "PrecoCusto";
+            this.PrecoCusto.Size = new System.Drawing.Size(151, 22);
+            this.PrecoCusto.TabIndex = 2;
             // 
             // label10
             // 
@@ -496,7 +502,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Size = new System.Drawing.Size(1029, 684);
+            this.tabPage2.Size = new System.Drawing.Size(1029, 691);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Informações fiscais";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -530,11 +536,58 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // painelPesquisa
+            // 
+            this.painelPesquisa.Controls.Add(this.dataGridView1);
+            this.painelPesquisa.Controls.Add(this.button4);
+            this.painelPesquisa.Controls.Add(this.selecionar);
+            this.painelPesquisa.Location = new System.Drawing.Point(3, 1);
+            this.painelPesquisa.Name = "painelPesquisa";
+            this.painelPesquisa.Size = new System.Drawing.Size(1037, 735);
+            this.painelPesquisa.TabIndex = 13;
+            this.painelPesquisa.Visible = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(1024, 618);
+            this.dataGridView1.TabIndex = 4;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(565, 651);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(100, 41);
+            this.button4.TabIndex = 6;
+            this.button4.Text = "Cancelar";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // selecionar
+            // 
+            this.selecionar.Location = new System.Drawing.Point(323, 648);
+            this.selecionar.Margin = new System.Windows.Forms.Padding(4);
+            this.selecionar.Name = "selecionar";
+            this.selecionar.Size = new System.Drawing.Size(100, 45);
+            this.selecionar.TabIndex = 5;
+            this.selecionar.Text = "Selecionar";
+            this.selecionar.UseVisualStyleBackColor = true;
+            this.selecionar.Click += new System.EventHandler(this.selecionar_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1036, 731);
+            this.Controls.Add(this.painelPesquisa);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.PesquisaProduto);
             this.Controls.Add(this.Cadastro);
@@ -554,6 +607,8 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.painelPesquisa.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -593,14 +648,18 @@
         public System.Windows.Forms.TextBox Marca;
         public System.Windows.Forms.TextBox PesquisaProduto;
         private System.Windows.Forms.Label label9;
-        public System.Windows.Forms.TextBox PreçoVenda;
-        public System.Windows.Forms.TextBox PreçoCusto;
+        public System.Windows.Forms.TextBox PrecoVenda;
+        public System.Windows.Forms.TextBox PrecoCusto;
         public System.Windows.Forms.TextBox Peso;
         public System.Windows.Forms.MaskedTextBox DataEntrada;
         public System.Windows.Forms.MaskedTextBox Validade;
         private System.Windows.Forms.Button NovoProduto;
         public System.Windows.Forms.Button ExcluirProduto;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        public System.Windows.Forms.Label label16;
+        public System.Windows.Forms.Label Id;
+        private System.Windows.Forms.Panel painelPesquisa;
+        public System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button4;
+        public System.Windows.Forms.Button selecionar;
     }
 }

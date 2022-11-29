@@ -100,7 +100,7 @@ namespace Aplicativo_Gestão_ERP
         }
         private void cadastroDeProdutoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            form2.Show();
+            form2.ShowDialog();
         }
         private void criardiretorio()
         {

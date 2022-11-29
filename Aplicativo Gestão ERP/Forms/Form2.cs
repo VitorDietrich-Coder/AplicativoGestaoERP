@@ -16,8 +16,6 @@ namespace Aplicativo_Gestão_ERP
 {
     public partial class Form2 : Form
     {
-        BuscaProduto buscaProduto = new BuscaProduto();
-
 
         public Form2()
         {
@@ -29,7 +27,7 @@ namespace Aplicativo_Gestão_ERP
         }
         public void button1_Click(object sender, EventArgs e)
         {
-            if (label16.Text != string.Empty)
+            if (Id.Text != string.Empty)
             {
                 this.openFileDialog1.Multiselect = true;
                 this.openFileDialog1.Title = "Selecionar Fotos";
@@ -82,7 +80,7 @@ namespace Aplicativo_Gestão_ERP
 
 
                 SalvaImagemDiretorio salvaImagemDiretorio = new SalvaImagemDiretorio();
-                salvaImagemDiretorio.salvaImagem(openFileDialog1.FileName);
+                salvaImagemDiretorio.salvaImagem(openFileDialog1.FileName, int.Parse(Id.Text));
             }
             else
             {
@@ -100,14 +98,14 @@ namespace Aplicativo_Gestão_ERP
             ValidaProduto valida = new ValidaProduto();
             ControlaProduto controla = new ControlaProduto();
             NomeProd.Text = "teste"; NomeProd.Text = "teste";
-            if (controla.acessa(label16.Text) == false)
+            if (controla.acessa(Id.Text) == false)
             {
-                CadastrodeProduto cadastro = new CadastrodeProduto(NomeProd.Text, Marca.Text, comboBox1.Text, float.Parse(Peso.Text), Convert.ToInt32(Quantidade.Text), Validade.Text, DataEntrada.Text, DataSaida.Text, float.Parse(PreçoCusto.Text), float.Parse(PreçoVenda.Text));
+                CadastrodeProduto cadastro = new CadastrodeProduto(NomeProd.Text, Marca.Text, comboBox1.Text, float.Parse(Peso.Text), Convert.ToInt32(Quantidade.Text), Validade.Text, DataEntrada.Text, DataSaida.Text, float.Parse(PrecoCusto.Text), float.Parse(PrecoVenda.Text));
                 MessageBox.Show(cadastro.mensagem);
             }
             else
             {
-                UpdateProduto update = new UpdateProduto(int.Parse(label16.Text), NomeProd.Text, Marca.Text, comboBox1.Text, float.Parse(Peso.Text), Convert.ToInt32(Quantidade.Text), Validade.Text, DataEntrada.Text, DataSaida.Text, float.Parse(PreçoCusto.Text), float.Parse(PreçoVenda.Text));
+                UpdateProduto update = new UpdateProduto(int.Parse(Id.Text), NomeProd.Text, Marca.Text, comboBox1.Text, float.Parse(Peso.Text), Convert.ToInt32(Quantidade.Text), Validade.Text, DataEntrada.Text, DataSaida.Text, float.Parse(PrecoCusto.Text), float.Parse(PrecoVenda.Text));
                 MessageBox.Show(update.mensagem);
 
             }
@@ -125,92 +123,92 @@ namespace Aplicativo_Gestão_ERP
 
             if (e.KeyChar == Convert.ToChar(Keys.Return))
             {
-                if (buscaProduto.Visible == false)
-                {
-                    buscaProduto.Visible = true;
-                    PesquisaProduto pesquisa = new PesquisaProduto();
-                    buscaProduto.dataGridView1.DataSource = pesquisa.pesquisaproduto(PesquisaProduto.Text);
 
-                }
-                else
-                {
-                    buscaProduto.Visible = false;
-                }
+                painelPesquisa.Visible = true;
+                PesquisaProduto pesquisa = new PesquisaProduto();
+                dataGridView1.DataSource = pesquisa.pesquisaproduto(PesquisaProduto.Text);
             }
         }
-        public void PreencheValores(List<string> lista)
-        {
-            NomeProd.Text = lista[0].ToString();
-            label16.Text = lista[1].ToString();
-            NomeProd.Text = lista[2].ToString();
-            Marca.Text = lista[3].ToString();
-            comboBox1.Text = lista[4].ToString();
-            Peso.Text = lista[5].ToString();
-            Quantidade.Text = lista[6].ToString();
-            Validade.Text = lista[7].ToString();
-            DataEntrada.Text = lista[8].ToString();
-            DataSaida.Text = lista[9].ToString();
-            PreçoCusto.Text = lista[10].ToString();
-           // PreçoVenda.Text = lista[11].ToString();
 
-            SalvaImagemDiretorio salvaImagemDiretorio = new SalvaImagemDiretorio();
-       //    pictureBox1.LoadAsync(salvaImagemDiretorio.buscaImagem(int.Parse(label16.Text)));
+        private void Form2_FormClosing(object sender, FormClosingEventArgs e)
+        {
         }
-    
-
-    private void Form2_FormClosing(object sender, FormClosingEventArgs e)
-    {
-    }
-    private void Form2_Load_1(object sender, EventArgs e)
-    {
-        MinimizeBox = false;
-        MaximizeBox = false;
-    }
-    private void NovoProduto_Click(object sender, EventArgs e)
-    {
-        LimpaCampo();
-    }
-    private void LimpaCampo()
-    {
-        label16.Text = "";
-        NomeProd.Text = "";
-        Marca.Text = "";
-        comboBox1.Text = "";
-        Peso.Text = "";
-        Quantidade.Text = "";
-        Validade.Text = "";
-        DataEntrada.Text = "";
-        DataSaida.Text = "";
-        PreçoCusto.Text = "";
-        PreçoVenda.Text = "";
-
-    }
-    private void button4_Click(object sender, EventArgs e)
-    {
-        buscaProduto.Visible = false;
-    }
-
-    private void ExcluirProduto_Click(object sender, EventArgs e)
-    {
-        ControlaProduto controla = new ControlaProduto();
-
-        if (controla.acessa(label16.Text) == false)
+        private void Form2_Load_1(object sender, EventArgs e)
         {
-            MessageBox.Show("Não é Possível Exluir esse Produto Selecionado");
+            MinimizeBox = false;
+            MaximizeBox = false;
         }
-        else
+        private void NovoProduto_Click(object sender, EventArgs e)
         {
-            ExcluirProduto excluir = new ExcluirProduto(int.Parse(label16.Text));
-            MessageBox.Show("Produto excluido com sucesso");
             LimpaCampo();
+        }
+        private void LimpaCampo()
+        {
+            Id.Text = "";
+            NomeProd.Text = "";
+            Marca.Text = "";
+            comboBox1.Text = "";
+            Peso.Text = "";
+            Quantidade.Text = "";
+            Validade.Text = "";
+            DataEntrada.Text = "";
+            DataSaida.Text = "";
+            PrecoCusto.Text = "";
+            PrecoVenda.Text = "";
 
         }
-    }
 
-    private void button3_Click_1(object sender, EventArgs e)
-    {
+        private void ExcluirProduto_Click(object sender, EventArgs e)
+        {
+            ControlaProduto controla = new ControlaProduto();
 
+            if (controla.acessa(Id.Text) == false)
+            {
+                MessageBox.Show("Não é Possível Exluir esse Produto Selecionado");
+            }
+            else
+            {
+                ExcluirProduto excluir = new ExcluirProduto(int.Parse(Id.Text));
+                MessageBox.Show("Produto excluido com sucesso");
+                LimpaCampo();
+
+            }
+        }
+
+        private void selecionar_Click(object sender, EventArgs e)
+        {
+            painelPesquisa.Visible = false;
+            int rowindex = dataGridView1.CurrentRow.Index;
+
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                string id = dataGridView1.SelectedRows[0].Cells["Cód"].Value.ToString();
+                string nome = dataGridView1.SelectedRows[0].Cells["Nome"].Value.ToString();
+                string marca = dataGridView1.SelectedRows[0].Cells["marca"].Value.ToString();
+                string unidadeMedida = dataGridView1.SelectedRows[0].Cells["UnidadeMedida"].Value.ToString();
+                string peso = dataGridView1.SelectedRows[0].Cells["Peso"].Value.ToString();
+                string quantidade = dataGridView1.SelectedRows[0].Cells["Quantidade"].Value.ToString();
+                string validade = dataGridView1.SelectedRows[0].Cells["Validade"].Value.ToString();
+                string dataEntrada = dataGridView1.SelectedRows[0].Cells["DataCompra"].Value.ToString();
+                string dataSaida = dataGridView1.SelectedRows[0].Cells["DataVenda"].Value.ToString();
+                string precoCusto = dataGridView1.SelectedRows[0].Cells["PreçoCusto"].Value.ToString();
+                string precoVenda = dataGridView1.SelectedRows[0].Cells["PreçoVenda"].Value.ToString();
+
+                Id.Text = id;
+                NomeProd.Text = nome;
+                Marca.Text = marca;
+                Peso.Text = peso;
+                comboBox1.Text = unidadeMedida;
+                Quantidade.Text = quantidade;
+                Validade.Text = validade;
+                DataEntrada.Text = dataEntrada;
+                DataSaida.Text = dataSaida;
+                PrecoCusto.Text = precoCusto;
+                PrecoVenda.Text = precoVenda;
+                SalvaImagemDiretorio salvaImagemDiretorio = new SalvaImagemDiretorio();
+                pictureBox1.LoadAsync(salvaImagemDiretorio.buscaImagem(int.Parse(id)));
+            }
+        }
     }
-}
 }
 

@@ -12,7 +12,8 @@ namespace Aplicativo_Gestão_ERP
 {
     public class SalvaImagemDiretorio
     {
-        public void salvaImagem(string filename)
+
+        public void salvaImagem(string filename, int codigo)
         {
             SqlCommand cmd = new SqlCommand();
             Conexao con = new Conexao();
@@ -21,8 +22,9 @@ namespace Aplicativo_Gestão_ERP
             try
             {
                 cmd.Parameters.Clear();
-                cmd.CommandText = "update CadProduto set CaminhoImagem = @CAMINHO where Código = @CODIGO";
+                cmd.CommandText = "update CadProduto set CaminhoImagem = @CAMINHO where Cód = @CODIGO";
                 cmd.Parameters.AddWithValue("CAMINHO", filename);
+                cmd.Parameters.AddWithValue("CODIGO", codigo);
                 cmd.Connection = con.conectar();
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Imagem cadastrada com sucesso!");

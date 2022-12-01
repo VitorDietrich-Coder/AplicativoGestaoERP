@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.31825.309
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AplicativoGestaoERP", "Aplicativo Gestão ERP\AplicativoGestaoERP.csproj", "{CFE49475-9FC1-4518-A881-87132795DE42}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testes", "ErpTeste\Testes.csproj", "{48203656-223A-4A2C-969D-436E0E3A5889}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Testes", "ErpTeste\Testes.csproj", "{48203656-223A-4A2C-969D-436E0E3A5889}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

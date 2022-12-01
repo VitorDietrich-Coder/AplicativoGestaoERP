@@ -100,6 +100,7 @@ namespace Aplicativo_Gestão_ERP
             NomeProd.Text = "teste"; NomeProd.Text = "teste";
             if (controla.acessa(Id.Text) == false)
             {
+                    
                 CadastrodeProduto cadastro = new CadastrodeProduto(NomeProd.Text, Marca.Text, comboBox1.Text, float.Parse(Peso.Text), Convert.ToInt32(Quantidade.Text), Validade.Text, DataEntrada.Text, DataSaida.Text, float.Parse(PrecoCusto.Text), float.Parse(PrecoVenda.Text));
                 MessageBox.Show(cadastro.mensagem);
             }

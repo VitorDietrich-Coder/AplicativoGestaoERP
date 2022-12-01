@@ -72,7 +72,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CAD.cs" />
+    <Compile Include="CadastroUsuario.cs" />
     <Compile Include="CadastrodeProduto.cs" />
     <Compile Include="Conexao.cs" />
     <Compile Include="ConexaoGET.cs" />
@@ -83,8 +83,8 @@
       <DependentUpon>Configuracoes.cs</DependentUpon>
     </Compile>
     <Compile Include="ConnectionLogin.cs" />
-    <Compile Include="Controlalogin.cs" />
-    <Compile Include="ControlaProduto.cs" />
+    <Compile Include="Controladores\Controlalogin.cs" />
+    <Compile Include="Controladores\ControlaProduto.cs" />
     <Compile Include="Controle.cs" />
     <Compile Include="ExcluirProduto.cs" />
     <Compile Include="Forms\Form1.cs">
@@ -121,7 +121,7 @@
     <Compile Include="UpdateProduto.cs" />
     <Compile Include="ValidaEmail.cs" />
     <Compile Include="ValidaProduto.cs" />
-    <Compile Include="VerificaCad.cs" />
+    <Compile Include="VerificaCadastro.cs" />
     <EmbeddedResource Include="Forms\Configuracoes.resx">
       <DependentUpon>Configuracoes.cs</DependentUpon>
     </EmbeddedResource>

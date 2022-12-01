@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace Aplicativo_Gestão_ERP
 {
-    public class CAD
+    public class CadastroUsuario
     {
         SqlCommand cmd = new SqlCommand();
         Conexao conexao = new Conexao();
         public string mensagem;
-        public CAD(string Nome, string Email, string Senha)
+        public CadastroUsuario(string Nome, string Email, string Senha)
         {
          
             cmd.CommandText = "insert into CadUser (Nome, Email, Senha) values (@Nome, @Email, @Senha)";

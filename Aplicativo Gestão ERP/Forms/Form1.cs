@@ -36,7 +36,7 @@ namespace Aplicativo_Gestão_ERP
                 {
                     if (Senha.Text == ConfSenhaCAD.Text)
                     {
-                        CAD cadson = new CAD(Nome.Text, Email.Text, Senha.Text);
+                        CadastroUsuario cadson = new CadastroUsuario(Nome.Text, Email.Text, Senha.Text);
                         MessageBox.Show(cadson.mensagem);
                         panel1.Visible = false;
                         panel2.Visible = true;

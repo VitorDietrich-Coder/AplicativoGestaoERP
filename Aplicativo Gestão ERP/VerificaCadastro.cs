@@ -8,11 +8,11 @@ using System.Data.SqlClient;
 
 namespace Aplicativo_Gestão_ERP
 {
-    public class VerificaCad
+    public class VerificaCadastro
     {
         SqlConnection con = new SqlConnection();
 
-        public VerificaCad()
+        public VerificaCadastro()
         {
             con.ConnectionString = @"Data Source=LAPTOP-CE4Q030Q;Initial Catalog=GestEstoque;Integrated Security=True";
         }

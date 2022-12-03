@@ -13,7 +13,7 @@ namespace Aplicativo_Gestão_ERP
         public String mensagem = "";
 
         SqlCommand cmd = new SqlCommand();
-        VerificaCadastro conn = new VerificaCadastro();
+        ControlaCadastro conn = new ControlaCadastro();
         SqlDataReader dre;
         public bool verificaemail(String email)
         {

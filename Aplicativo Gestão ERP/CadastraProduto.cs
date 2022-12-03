@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace Aplicativo_Gestão_ERP
 {
-    public class CadastrodeProduto
+    public class CadastraProduto
     {
    
         SqlCommand cmd = new SqlCommand();
         Conexao conexao = new Conexao();
         public string mensagem;
-        public CadastrodeProduto(string Nome, string Marca, string UnidadeMedida, float Peso, int Quantidade, string Validade, string DataCompra, string DataVenda, float PreçoCusto, float PreçoVenda)
+        public CadastraProduto(string Nome, string Marca, string UnidadeMedida, float Peso, int Quantidade, string Validade, string DataCompra, string DataVenda, float PreçoCusto, float PreçoVenda)
         {
             cmd.CommandText = "insert into CadProduto (Nome, Marca, UnidadeMedida, Peso, Quantidade, Validade, DataCompra, DataVenda, PreçoCusto, PreçoVenda) values (@Nome, @Marca, @UnidadeMedida, @Peso, @Quantidade, @Validade, @DataCompra, @DataVenda, @PreçoCusto, @PreçoVenda)";
             cmd.Parameters.AddWithValue("@Nome", Nome);

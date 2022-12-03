@@ -73,9 +73,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CadastroUsuario.cs" />
-    <Compile Include="CadastrodeProduto.cs" />
-    <Compile Include="Conexao.cs" />
-    <Compile Include="ConexaoGET.cs" />
+    <Compile Include="CadastraProduto.cs" />
+    <Compile Include="ConexãoBanco\Conexao.cs" />
+    <Compile Include="ConexãoBanco\ConexaoGET.cs" />
     <Compile Include="Forms\Configuracoes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,7 +85,7 @@
     <Compile Include="ConnectionLogin.cs" />
     <Compile Include="Controladores\Controlalogin.cs" />
     <Compile Include="Controladores\ControlaProduto.cs" />
-    <Compile Include="Controle.cs" />
+    <Compile Include="Controladores\Controle.cs" />
     <Compile Include="ExcluirProduto.cs" />
     <Compile Include="Forms\Form1.cs">
       <SubType>Form</SubType>
@@ -114,6 +114,7 @@
     <Compile Include="Login.cs" />
     <Compile Include="BuscaNome.cs" />
     <Compile Include="PesquisaProduto.cs" />
+    <Compile Include="Produto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RespeitaQuant.cs" />
@@ -121,7 +122,7 @@
     <Compile Include="UpdateProduto.cs" />
     <Compile Include="ValidaEmail.cs" />
     <Compile Include="ValidaProduto.cs" />
-    <Compile Include="VerificaCadastro.cs" />
+    <Compile Include="Controladores\ControlaCadastro.cs" />
     <EmbeddedResource Include="Forms\Configuracoes.resx">
       <DependentUpon>Configuracoes.cs</DependentUpon>
     </EmbeddedResource>

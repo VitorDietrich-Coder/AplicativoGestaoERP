@@ -58,13 +58,12 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.Peso = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.Marca = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.NomeProd = new System.Windows.Forms.TextBox();
+            this.Nome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -72,8 +71,9 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.painelPesquisa = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button4 = new System.Windows.Forms.Button();
+            this.CancelarSelecao = new System.Windows.Forms.Button();
             this.selecionar = new System.Windows.Forms.Button();
+            this.Cancelar = new System.Windows.Forms.Button();
             this.Cadastro.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -117,13 +117,12 @@
             this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Controls.Add(this.Peso);
-            this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.label7);
             this.tabPage1.Controls.Add(this.Marca);
             this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.NomeProd);
+            this.tabPage1.Controls.Add(this.Nome);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
@@ -233,7 +232,6 @@
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Estoque";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // pictureBox1
             // 
@@ -310,7 +308,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(144, 24);
             this.comboBox1.TabIndex = 4;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label13
             // 
@@ -416,18 +413,6 @@
             this.Peso.Name = "Peso";
             this.Peso.Size = new System.Drawing.Size(155, 22);
             this.Peso.TabIndex = 2;
-            this.Peso.TextChanged += new System.EventHandler(this.Peso_TextChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(616, 132);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 16);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Peso:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -477,13 +462,13 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Marca:";
             // 
-            // NomeProd
+            // Nome
             // 
-            this.NomeProd.Location = new System.Drawing.Point(57, 80);
-            this.NomeProd.Margin = new System.Windows.Forms.Padding(4);
-            this.NomeProd.Name = "NomeProd";
-            this.NomeProd.Size = new System.Drawing.Size(335, 22);
-            this.NomeProd.TabIndex = 2;
+            this.Nome.Location = new System.Drawing.Point(57, 80);
+            this.Nome.Margin = new System.Windows.Forms.Padding(4);
+            this.Nome.Name = "Nome";
+            this.Nome.Size = new System.Drawing.Size(335, 22);
+            this.Nome.TabIndex = 2;
             // 
             // label1
             // 
@@ -538,13 +523,14 @@
             // 
             // painelPesquisa
             // 
+            this.painelPesquisa.Controls.Add(this.Cancelar);
             this.painelPesquisa.Controls.Add(this.dataGridView1);
-            this.painelPesquisa.Controls.Add(this.button4);
+            this.painelPesquisa.Controls.Add(this.CancelarSelecao);
             this.painelPesquisa.Controls.Add(this.selecionar);
-            this.painelPesquisa.Location = new System.Drawing.Point(3, 1);
+            this.painelPesquisa.Location = new System.Drawing.Point(0, -2);
             this.painelPesquisa.Name = "painelPesquisa";
             this.painelPesquisa.Size = new System.Drawing.Size(1037, 735);
-            this.painelPesquisa.TabIndex = 13;
+            this.painelPesquisa.TabIndex = 18;
             this.painelPesquisa.Visible = false;
             // 
             // dataGridView1
@@ -561,15 +547,12 @@
             this.dataGridView1.Size = new System.Drawing.Size(1024, 618);
             this.dataGridView1.TabIndex = 4;
             // 
-            // button4
+            // CancelarSelecao
             // 
-            this.button4.Location = new System.Drawing.Point(565, 651);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 41);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Cancelar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.CancelarSelecao.Location = new System.Drawing.Point(0, 0);
+            this.CancelarSelecao.Name = "CancelarSelecao";
+            this.CancelarSelecao.Size = new System.Drawing.Size(75, 23);
+            this.CancelarSelecao.TabIndex = 5;
             // 
             // selecionar
             // 
@@ -581,6 +564,17 @@
             this.selecionar.Text = "Selecionar";
             this.selecionar.UseVisualStyleBackColor = true;
             this.selecionar.Click += new System.EventHandler(this.selecionar_Click);
+            // 
+            // Cancelar
+            // 
+            this.Cancelar.Location = new System.Drawing.Point(609, 648);
+            this.Cancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.Cancelar.Name = "Cancelar";
+            this.Cancelar.Size = new System.Drawing.Size(100, 45);
+            this.Cancelar.TabIndex = 6;
+            this.Cancelar.Text = "Selecionar";
+            this.Cancelar.UseVisualStyleBackColor = true;
+            this.Cancelar.Click += new System.EventHandler(this.Cancelar_Click);
             // 
             // Form2
             // 
@@ -598,7 +592,6 @@
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista Produtos";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_FormClosing);
             this.Load += new System.EventHandler(this.Form2_Load_1);
             this.Cadastro.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -624,7 +617,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -644,7 +636,7 @@
         private System.Windows.Forms.MaskedTextBox DataSaida;
         public System.Windows.Forms.CheckBox ControlaEstoque;
         public System.Windows.Forms.PictureBox pictureBox1;
-        public System.Windows.Forms.TextBox NomeProd;
+        public System.Windows.Forms.TextBox Nome;
         public System.Windows.Forms.TextBox Marca;
         public System.Windows.Forms.TextBox PesquisaProduto;
         private System.Windows.Forms.Label label9;
@@ -659,7 +651,8 @@
         public System.Windows.Forms.Label Id;
         private System.Windows.Forms.Panel painelPesquisa;
         public System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button CancelarSelecao;
         public System.Windows.Forms.Button selecionar;
+        public System.Windows.Forms.Button Cancelar;
     }
 }

@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace Aplicativo_Gestão_ERP
 {
-    public class VerificaCadastro
+    public class ControlaCadastro
     {
         SqlConnection conexao = new SqlConnection(ConexaoGET.conn);
         public SqlConnection conecta()

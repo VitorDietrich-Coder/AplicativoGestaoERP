@@ -1,29 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Security;
-using static System.Net.WebRequestMethods;
 
 namespace Aplicativo_Gestão_ERP
 {
     public partial class Form2 : Form
     {
-
         public Form2()
         {
             InitializeComponent();
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
         }
         public void button1_Click(object sender, EventArgs e)
         {
@@ -84,41 +71,49 @@ namespace Aplicativo_Gestão_ERP
             }
             else
             {
-                NomeProd.Text = "teste";
+                Nome.Text = "teste";
                 MessageBox.Show("Selecione um produto para importar a imagem");
             }
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
         private void button2_Click(object sender, EventArgs e)
         {
             ValidaProduto valida = new ValidaProduto();
             ControlaProduto controla = new ControlaProduto();
-            NomeProd.Text = "teste"; NomeProd.Text = "teste";
-            if (controla.acessa(Convert.ToInt16(Id.Text)) == false)
+
+            if (controla.acessa(short.Parse(Id.Text)) == false)
             {
-                    
-                CadastrodeProduto cadastro = new CadastrodeProduto(NomeProd.Text, Marca.Text, comboBox1.Text, float.Parse(Peso.Text), Convert.ToInt32(Quantidade.Text), Validade.Text, DataEntrada.Text, DataSaida.Text, float.Parse(PrecoCusto.Text), float.Parse(PrecoVenda.Text));
-                MessageBox.Show(cadastro.mensagem);
+                if (string.IsNullOrEmpty(Nome.Text))
+                {}
+                else if (string.IsNullOrEmpty(Marca.Text))
+                { }
+                else if (string.IsNullOrEmpty(comboBox1.Text))
+                { }
+                else if (string.IsNullOrEmpty(Peso.Text))
+                { }
+                else if (string.IsNullOrEmpty(Quantidade.Text))
+                { }
+                else if (string.IsNullOrEmpty(Validade.Text))
+                { }
+                else if (string.IsNullOrEmpty(DataEntrada.Text))
+                { }
+                else if (string.IsNullOrEmpty(DataSaida.Text))
+                { }
+                else if (string.IsNullOrEmpty(PrecoCusto.Text))
+                { }
+                else if (string.IsNullOrEmpty(PrecoVenda.Text))
+                { }
+                else
+                {
+                    Produto produto = new Produto(short.Parse(Id.Text), Nome.Text, Marca.Text, comboBox1.Text, float.Parse(Peso.Text), short.Parse(Quantidade.Text), Validade.Text, DataEntrada.Text, DataSaida.Text, float.Parse(PrecoCusto.Text), float.Parse(PrecoVenda.Text));
+                    produto.RegistraProduto();
+                }
             }
             else
             {
-                UpdateProduto update = new UpdateProduto(int.Parse(Id.Text), NomeProd.Text, Marca.Text, comboBox1.Text, float.Parse(Peso.Text), Convert.ToInt32(Quantidade.Text), Validade.Text, DataEntrada.Text, DataSaida.Text, float.Parse(PrecoCusto.Text), float.Parse(PrecoVenda.Text));
-                MessageBox.Show(update.mensagem);
-
+                Produto produto = new Produto(short.Parse(Id.Text), Nome.Text, Marca.Text, comboBox1.Text, float.Parse(Peso.Text), short.Parse(Quantidade.Text), Validade.Text, DataEntrada.Text, DataSaida.Text, float.Parse(PrecoCusto.Text), float.Parse(PrecoVenda.Text));
+                produto.AlteraProduto();
             }
         }
-        private void Peso_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void label4_Click(object sender, EventArgs e)
-        {
-        }
-
         public void PesquisaProduto_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
 
@@ -129,10 +124,6 @@ namespace Aplicativo_Gestão_ERP
                 PesquisaProduto pesquisa = new PesquisaProduto();
                 dataGridView1.DataSource = pesquisa.pesquisaproduto(PesquisaProduto.Text);
             }
-        }
-
-        private void Form2_FormClosing(object sender, FormClosingEventArgs e)
-        {
         }
         private void Form2_Load_1(object sender, EventArgs e)
         {
@@ -146,7 +137,7 @@ namespace Aplicativo_Gestão_ERP
         private void LimpaCampo()
         {
             Id.Text = "";
-            NomeProd.Text = "";
+            Nome.Text = "";
             Marca.Text = "";
             comboBox1.Text = "";
             Peso.Text = "";
@@ -156,7 +147,6 @@ namespace Aplicativo_Gestão_ERP
             DataSaida.Text = "";
             PrecoCusto.Text = "";
             PrecoVenda.Text = "";
-
         }
 
         private void ExcluirProduto_Click(object sender, EventArgs e)
@@ -175,7 +165,6 @@ namespace Aplicativo_Gestão_ERP
 
             }
         }
-
         private void selecionar_Click(object sender, EventArgs e)
         {
             painelPesquisa.Visible = false;
@@ -196,7 +185,7 @@ namespace Aplicativo_Gestão_ERP
                 string precoVenda = dataGridView1.SelectedRows[0].Cells["PrecoVenda"].Value.ToString();
 
                 Id.Text = id;
-                NomeProd.Text = nome;
+                Nome.Text = nome;
                 Marca.Text = marca;
                 Peso.Text = peso;
                 comboBox1.Text = unidadeMedida;
@@ -209,6 +198,11 @@ namespace Aplicativo_Gestão_ERP
                 SalvaImagemDiretorio salvaImagemDiretorio = new SalvaImagemDiretorio();
                 pictureBox1.LoadAsync(salvaImagemDiretorio.buscaImagem(int.Parse(id)));
             }
+        }
+
+        private void Cancelar_Click(object sender, EventArgs e)
+        {
+            painelPesquisa.Visible = false;
         }
     }
 }

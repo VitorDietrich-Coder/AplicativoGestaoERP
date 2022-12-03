@@ -6,27 +6,25 @@ using System.Threading.Tasks;
 
 namespace Aplicativo_Gestão_ERP
 {
-  public class Controle
+    public class Controle
     {
         public bool tem;
         public string mensagem = "";
-        public bool acessar(String email, String senha)
+        public bool acessar(string email, string senha)
         {
             Login login = new Login();
+
             tem = login.verificalogin(email, senha);
             if (login.mensagem.Equals(""))
             {
-
                 this.mensagem = login.mensagem;
-
             }
             return tem;
 
         }
-        public String Cadastrar(String email, String Senha)
+        public string Cadastrar(string email, string Senha)
         {
             return mensagem;
-
-             }
-           }
         }
+    }
+}

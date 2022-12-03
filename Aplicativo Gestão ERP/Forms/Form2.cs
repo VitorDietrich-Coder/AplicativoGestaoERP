@@ -98,7 +98,7 @@ namespace Aplicativo_Gestão_ERP
             ValidaProduto valida = new ValidaProduto();
             ControlaProduto controla = new ControlaProduto();
             NomeProd.Text = "teste"; NomeProd.Text = "teste";
-            if (controla.acessa(Id.Text) == false)
+            if (controla.acessa(Convert.ToInt16(Id.Text)) == false)
             {
                     
                 CadastrodeProduto cadastro = new CadastrodeProduto(NomeProd.Text, Marca.Text, comboBox1.Text, float.Parse(Peso.Text), Convert.ToInt32(Quantidade.Text), Validade.Text, DataEntrada.Text, DataSaida.Text, float.Parse(PrecoCusto.Text), float.Parse(PrecoVenda.Text));
@@ -163,7 +163,7 @@ namespace Aplicativo_Gestão_ERP
         {
             ControlaProduto controla = new ControlaProduto();
 
-            if (controla.acessa(Id.Text) == false)
+            if (controla.acessa(Convert.ToInt16(Id.Text)) == false)
             {
                 MessageBox.Show("Não é Possível Exluir esse Produto Selecionado");
             }
@@ -183,7 +183,7 @@ namespace Aplicativo_Gestão_ERP
 
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                string id = dataGridView1.SelectedRows[0].Cells["Cód"].Value.ToString();
+                string id = dataGridView1.SelectedRows[0].Cells["Id"].Value.ToString();
                 string nome = dataGridView1.SelectedRows[0].Cells["Nome"].Value.ToString();
                 string marca = dataGridView1.SelectedRows[0].Cells["marca"].Value.ToString();
                 string unidadeMedida = dataGridView1.SelectedRows[0].Cells["UnidadeMedida"].Value.ToString();
@@ -192,8 +192,8 @@ namespace Aplicativo_Gestão_ERP
                 string validade = dataGridView1.SelectedRows[0].Cells["Validade"].Value.ToString();
                 string dataEntrada = dataGridView1.SelectedRows[0].Cells["DataCompra"].Value.ToString();
                 string dataSaida = dataGridView1.SelectedRows[0].Cells["DataVenda"].Value.ToString();
-                string precoCusto = dataGridView1.SelectedRows[0].Cells["PreçoCusto"].Value.ToString();
-                string precoVenda = dataGridView1.SelectedRows[0].Cells["PreçoVenda"].Value.ToString();
+                string precoCusto = dataGridView1.SelectedRows[0].Cells["PrecoCusto"].Value.ToString();
+                string precoVenda = dataGridView1.SelectedRows[0].Cells["PrecoVenda"].Value.ToString();
 
                 Id.Text = id;
                 NomeProd.Text = nome;

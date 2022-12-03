@@ -22,9 +22,9 @@ namespace Aplicativo_Gestão_ERP
             try
             {
                 cmd.Parameters.Clear();
-                cmd.CommandText = "update CadProduto set CaminhoImagem = @CAMINHO where Cód = @CODIGO";
+                cmd.CommandText = "update CadProduto set CaminhoImagem = @CAMINHO where Id = @Id";
                 cmd.Parameters.AddWithValue("CAMINHO", filename);
-                cmd.Parameters.AddWithValue("CODIGO", codigo);
+                cmd.Parameters.AddWithValue("Id", codigo);
                 cmd.Connection = con.conectar();
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Imagem cadastrada com sucesso!");
@@ -38,19 +38,19 @@ namespace Aplicativo_Gestão_ERP
         {
             SqlCommand cmd = new SqlCommand();
             Conexao con = new Conexao();
-            var caminho = string.Empty; 
+            var caminho = string.Empty;
             try
             {
                 cmd.Parameters.Clear();
-                cmd.CommandText = "Select CaminhoImagem from CadProduto where Cód = @CODIGO";
-                cmd.Parameters.AddWithValue("CODIGO", codigo);
+                cmd.CommandText = "Select CaminhoImagem from CadProduto where Id = @Id";
+                cmd.Parameters.AddWithValue("Id", codigo);
                 cmd.Connection = con.conectar();
                 cmd.ExecuteNonQuery();
 
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                   caminho =  dr["CaminhoImagem"].ToString().Replace(@"\\", @"\");
+                    caminho = dr["CaminhoImagem"].ToString().Replace(@"\\", @"\");
 
                 }
                 return caminho;

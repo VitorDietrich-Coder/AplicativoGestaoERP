@@ -10,11 +10,11 @@ namespace Aplicativo_Gestão_ERP
     {
 
         public bool tem;
-        public String mensagem = "";
-        public bool acessa(String cod)
+        public string mensagem = "";
+        public bool acessa(int codigo)
         {
             ValidaProduto validaproduto = new ValidaProduto();
-            tem = validaproduto.verificacod(cod);
+            tem = validaproduto.verificacod(codigo);
             if (validaproduto.mensagem.Equals(""))
             {
                 this.mensagem = validaproduto.mensagem;

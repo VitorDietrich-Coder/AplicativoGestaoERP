@@ -8,22 +8,18 @@ using System.Threading.Tasks;
 
 namespace Aplicativo_Gestão_ERP
 {
-    public  class PesquisaProduto
+    public class PesquisaProduto
     {
-        public object pesquisaproduto(string cod)
+        public object pesquisaproduto(string valor)
         {
             try
             {
-                using (SqlConnection con = new SqlConnection(ConexaoGET.conn))
+                using (SqlConnection conexao = new SqlConnection(ConexaoGET.conn))
                 {
-                    
+                    conexao.Open();
+                    var sqlquery = "Select * From CadProduto where Id like '%" + valor + "' or Nome Like '%" + valor + "'";
 
-                    con.Open();
-                    var sqlquery = "Select * From CadProduto where Cód like '%" + cod + "' or Nome Like '%" + cod + "'";
-
-
-
-                    using (SqlDataAdapter da = new SqlDataAdapter(sqlquery, con))
+                    using (SqlDataAdapter da = new SqlDataAdapter(sqlquery, conexao))
                     {
                         using (DataTable dt = new DataTable())
                         {
@@ -34,7 +30,8 @@ namespace Aplicativo_Gestão_ERP
                 }
             }
             finally
-            { }
+            {
+            }
         }
     }
 }

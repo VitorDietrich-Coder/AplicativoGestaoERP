@@ -11,19 +11,17 @@ namespace Aplicativo_Gestão_ERP
     public class BuscaNome
     {
         public string Nome { get; set; }
-
-        public string Pega_Nome2(string Email)
-            {
+        public string BuscaNomes(string email)
+        {
             try
             {
-
-                using (SqlConnection con = new SqlConnection(ConexaoGET.conn))
+                using (SqlConnection conexao = new SqlConnection(ConexaoGET.conn))
                 {
-                    con.Open();
-                    string lista =  "";
+                    conexao.Open();
+                    string lista = "";
 
-                    SqlCommand cmd = new SqlCommand("select * from CadUser Where Email = @Email", con);
-                    cmd.Parameters.AddWithValue("@Email", Email);
+                    SqlCommand cmd = new SqlCommand("select * from CadUser Where Email = @Email", conexao);
+                    cmd.Parameters.AddWithValue("Email", email);
 
                     SqlDataReader dr = cmd.ExecuteReader();
                     while (dr.Read())
@@ -36,8 +34,10 @@ namespace Aplicativo_Gestão_ERP
                     return lista;
                 }
             }
-            finally { }
+            finally
+            {
             }
         }
     }
+}
 

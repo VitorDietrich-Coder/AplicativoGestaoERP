@@ -10,25 +10,20 @@ namespace Aplicativo_Gestão_ERP
 {
     public class VerificaCadastro
     {
-        SqlConnection con = new SqlConnection();
-
-        public VerificaCadastro()
-        {
-            con.ConnectionString = @"Data Source=LAPTOP-CE4Q030Q;Initial Catalog=GestEstoque;Integrated Security=True";
-        }
+        SqlConnection conexao = new SqlConnection(ConexaoGET.conn);
         public SqlConnection conecta()
         {
-            if (con.State == System.Data.ConnectionState.Closed)
+            if (conexao.State == System.Data.ConnectionState.Closed)
             {
-                con.Open();
+                conexao.Open();
             }
-            return con;
+            return conexao;
         }
         public void desconecta()
         {
-            if (con.State == System.Data.ConnectionState.Open)
+            if (conexao.State == System.Data.ConnectionState.Open)
             {
-                con.Close();
+                conexao.Close();
             }
         }
     }

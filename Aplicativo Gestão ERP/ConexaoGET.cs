@@ -13,7 +13,7 @@ namespace Aplicativo_Gestão_ERP
 
         public static string conn
         {
-           get { return $"Data Source={server}; Integrated Security=True; Initial Catalog = {database}"; }
+            get { return $"Data Source={server}; Integrated Security=True; Initial Catalog = {database}"; }
 
 
         }

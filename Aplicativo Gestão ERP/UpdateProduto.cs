@@ -9,40 +9,39 @@ namespace Aplicativo_Gestão_ERP
 {
     public class UpdateProduto
     {
-
-            SqlCommand cmd = new SqlCommand();
-            Conexao conexao = new Conexao();
-            public string mensagem;
-            public UpdateProduto(int Cód, string Nome, string Marca, string UnidadeMedida, float Peso, int Quantidade, string Validade, string DataCompra, string DataVenda, float PreçoCusto, float PreçoVenda)
+        SqlCommand cmd = new SqlCommand();
+        Conexao conexao = new Conexao();
+        public string mensagem;
+        public UpdateProduto(int codigo, string nome, string marca, string unidadeMedida, float peso, int quantidade, string validade, string dataCompra, string dataVenda, float precoCusto, float precoVenda)
+        {
+            cmd.CommandText = "UPDATE CadProduto SET Nome = @Nome, Marca = @Marca, UnidadeMedida = @UnidadeMedida, Peso = @Peso, Quantidade = @Quantidade, Validade = @Validade, DataCompra = @DataCompra, DataVenda = @DataVenda, PrecoCusto = @PrecoCusto, PrecoVenda = @PrecoVenda Where Id = @Id";
+            cmd.Parameters.AddWithValue("@Id", codigo);
+            cmd.Parameters.AddWithValue("@Nome", nome);
+            cmd.Parameters.AddWithValue("@Marca", marca);
+            cmd.Parameters.AddWithValue("@UnidadeMedida", unidadeMedida);
+            cmd.Parameters.AddWithValue("@Peso", peso);
+            cmd.Parameters.AddWithValue("@Quantidade", quantidade);
+            cmd.Parameters.AddWithValue("@Validade", validade);
+            cmd.Parameters.AddWithValue("@DataCompra", dataCompra);
+            cmd.Parameters.AddWithValue("@DataVenda", dataVenda);
+            cmd.Parameters.AddWithValue("@PrecoCusto", precoCusto);
+            cmd.Parameters.AddWithValue("@PrecoVenda", precoVenda);
+            try
             {
-            cmd.CommandText = "UPDATE CadProduto SET Nome = @Nome, Marca = @Marca, UnidadeMedida = @UnidadeMedida, Peso = @Peso, Quantidade = @Quantidade, Validade = @Validade, DataCompra = @DataCompra, DataVenda = @DataVenda, PreçoCusto = @PreçoCusto, PreçoVenda = @PreçoVenda Where Cód = @Cód";
-                cmd.Parameters.AddWithValue("@Cód", Cód);
-                cmd.Parameters.AddWithValue("@Nome", Nome);
-                cmd.Parameters.AddWithValue("@Marca", Marca);
-                cmd.Parameters.AddWithValue("@UnidadeMedida", UnidadeMedida);
-                cmd.Parameters.AddWithValue("@Peso", Peso);
-                cmd.Parameters.AddWithValue("@Quantidade", Quantidade);
-                cmd.Parameters.AddWithValue("@Validade", Validade);
-                cmd.Parameters.AddWithValue("@DataCompra", DataCompra);
-                cmd.Parameters.AddWithValue("@DataVenda", DataVenda);
-                cmd.Parameters.AddWithValue("@PreçoCusto", PreçoCusto);
-                cmd.Parameters.AddWithValue("@PreçoVenda", PreçoVenda);
-                try
-                {
-                    cmd.Connection = conexao.conectar();
+                cmd.Connection = conexao.conectar();
 
-                    cmd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();
 
-                    conexao.desconectar();
+                conexao.desconectar();
 
-                    this.mensagem = "Alterado campo com sucesso efetuado com sucesso";
-                }
-                catch (Exception e)
-                {
-                    this.mensagem = "Erro de conexao";
+                this.mensagem = "Alterado campo com sucesso efetuado com sucesso";
+            }
+            catch (Exception e)
+            {
+                this.mensagem = "Erro de conexao";
 
-                }
             }
         }
     }
+}
 

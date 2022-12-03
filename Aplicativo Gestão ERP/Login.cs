@@ -13,17 +13,16 @@ namespace Aplicativo_Gestão_ERP
         public string mensagem = "";
         public bool verificalogin(String email, String senha)
         {
-
             SqlCommand cmd = new SqlCommand();
-            Conexao con = new Conexao();
+            Conexao conexao = new Conexao();
             SqlDataReader dr;
 
             cmd.CommandText = "select * from CadUser where email = @email and senha = @senha";
-            cmd.Parameters.AddWithValue("@email", email);
-            cmd.Parameters.AddWithValue("@senha", senha);
+            cmd.Parameters.AddWithValue("email", email);
+            cmd.Parameters.AddWithValue("senha", senha);
             try
             {
-                cmd.Connection = con.conectar();
+                cmd.Connection = conexao.conectar();
                 dr = cmd.ExecuteReader();
                 if (dr.HasRows)
                 {

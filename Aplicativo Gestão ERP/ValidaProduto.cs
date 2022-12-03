@@ -9,34 +9,34 @@ namespace Aplicativo_Gestão_ERP
 {
     public class ValidaProduto
     {
-   
-            public bool tem;
-            public String mensagem = "";
 
-            SqlCommand cmd = new SqlCommand();
-            VerificaCadastro conn = new VerificaCadastro();
-            SqlDataReader dre;
-            public bool verificacod(String Cód)
+        public bool tem;
+        public String mensagem = "";
+
+        SqlCommand cmd = new SqlCommand();
+        VerificaCadastro conn = new VerificaCadastro();
+        SqlDataReader dre;
+        public bool verificacod(int codigo)
+        {
+            cmd.CommandText = "select * from CadProduto where Id = @Id";
+            cmd.Parameters.AddWithValue("Id", codigo);
+
+            try
             {
-                cmd.CommandText = "select * from CadProduto where Cód = @Cód";
-                cmd.Parameters.AddWithValue("@Cód", Cód);
-
-                try
+                cmd.Connection = conn.conecta();
+                dre = cmd.ExecuteReader();
+                if (dre.HasRows)
                 {
-                    cmd.Connection = conn.conecta();
-                    dre = cmd.ExecuteReader();
-                    if (dre.HasRows)
-                    {
-                        tem = true;
-                    }
+                    tem = true;
                 }
-                catch (SqlException)
-                {
-                    this.mensagem = "erro com banco de dados";
-                }
-                return tem;
             }
+            catch (SqlException)
+            {
+                this.mensagem = "erro com banco de dados";
+            }
+            return tem;
         }
-    
     }
+
+}
 

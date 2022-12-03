@@ -19,7 +19,7 @@ namespace Aplicativo_Gestão_ERP
                     MessageBox.Show($"Seu estoque minimo está configurado para{minimo} o mesmo ficará abaixo do minimo deseja continuar?");
                     DialogResult confirm = MessageBox.Show("Deseja Continuar?", "Salvar Arquivo", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
                 }
-                else if (quantidade >  maximo)
+                else if (quantidade > maximo)
                 {
                     MessageBox.Show($"Seu estoque máximo está configurado para {maximo} deseja importar tudo isso ?");
                 }
@@ -28,7 +28,6 @@ namespace Aplicativo_Gestão_ERP
             {
                 MessageBox.Show($"Seu estoque minimo não está configurado");
             }
-        
         }
     }
 }

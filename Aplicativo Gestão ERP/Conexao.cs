@@ -8,27 +8,27 @@ using System.Data.SqlClient;
 
 namespace Aplicativo_Gestão_ERP
 {
-        public  class Conexao
-        {
-        SqlConnection Conn = new SqlConnection(ConexaoGET.conn);
+    public class Conexao
+    {
+        SqlConnection conexao = new SqlConnection(ConexaoGET.conn);
 
         public SqlConnection conectar()
         {
-            if (Conn.State == System.Data.ConnectionState.Closed)
-            { 
-                Conn.Open();
-            
+            if (conexao.State == System.Data.ConnectionState.Closed)
+            {
+                conexao.Open();
+
             }
-            return Conn;
+            return conexao;
         }
         public SqlConnection desconectar()
         {
-            if (Conn.State == System.Data.ConnectionState.Open)
+            if (conexao.State == System.Data.ConnectionState.Open)
             {
-                Conn.Close();
+                conexao.Close();
 
             }
-            return Conn;
+            return conexao;
         }
     }
 }

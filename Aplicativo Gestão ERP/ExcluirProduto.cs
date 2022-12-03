@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 
 namespace Aplicativo_Gestão_ERP
 {
-    public  class ExcluirProduto
+    public class ExcluirProduto
     {
         SqlCommand cmd = new SqlCommand();
         Conexao conexao = new Conexao();
         public string mensagem;
-        public ExcluirProduto(int Cód)
+        public ExcluirProduto(int codigo)
         {
-            cmd.CommandText = "DELETE FROM CadProduto WHERE Cód = @Cód";
-            cmd.Parameters.AddWithValue("@Cód", Cód);
-            
+            cmd.CommandText = "DELETE FROM CadProduto WHERE Id = @Id";
+            cmd.Parameters.AddWithValue("Id", codigo);
+
             try
             {
                 cmd.Connection = conexao.conectar();
@@ -34,4 +34,3 @@ namespace Aplicativo_Gestão_ERP
         }
     }
 }
-   

@@ -9,25 +9,20 @@ namespace Aplicativo_Gestão_ERP
 {
     public class Conectionlogin
     {
-        SqlConnection con = new SqlConnection();
-
-        public Conectionlogin()
-        {
-            con.ConnectionString = @"Data Source=LAPTOP-CE4Q030Q;Initial Catalog=GestEstoque;Integrated Security=True";
-        }
+        SqlConnection conexao = new SqlConnection(ConexaoGET.conn);
         public SqlConnection conectar()
         {
-            if (con.State == System.Data.ConnectionState.Closed)
+            if (conexao.State == System.Data.ConnectionState.Closed)
             {
-                con.Open();
+                conexao.Open();
             }
-            return con;
+            return conexao;
         }
         public void desconectar()
         {
-            if (con.State == System.Data.ConnectionState.Open)
+            if (conexao.State == System.Data.ConnectionState.Open)
             {
-                con.Close();
+                conexao.Close();
             }
         }
     }

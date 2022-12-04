@@ -70,10 +70,10 @@
             this.PesquisaProduto = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.painelPesquisa = new System.Windows.Forms.Panel();
+            this.Cancelar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.CancelarSelecao = new System.Windows.Forms.Button();
             this.selecionar = new System.Windows.Forms.Button();
-            this.Cancelar = new System.Windows.Forms.Button();
             this.Cadastro.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -533,6 +533,17 @@
             this.painelPesquisa.TabIndex = 18;
             this.painelPesquisa.Visible = false;
             // 
+            // Cancelar
+            // 
+            this.Cancelar.Location = new System.Drawing.Point(609, 648);
+            this.Cancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.Cancelar.Name = "Cancelar";
+            this.Cancelar.Size = new System.Drawing.Size(100, 45);
+            this.Cancelar.TabIndex = 6;
+            this.Cancelar.Text = "Selecionar";
+            this.Cancelar.UseVisualStyleBackColor = true;
+            this.Cancelar.Click += new System.EventHandler(this.Cancelar_Click);
+            // 
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
@@ -564,17 +575,6 @@
             this.selecionar.Text = "Selecionar";
             this.selecionar.UseVisualStyleBackColor = true;
             this.selecionar.Click += new System.EventHandler(this.selecionar_Click);
-            // 
-            // Cancelar
-            // 
-            this.Cancelar.Location = new System.Drawing.Point(609, 648);
-            this.Cancelar.Margin = new System.Windows.Forms.Padding(4);
-            this.Cancelar.Name = "Cancelar";
-            this.Cancelar.Size = new System.Drawing.Size(100, 45);
-            this.Cancelar.TabIndex = 6;
-            this.Cancelar.Text = "Selecionar";
-            this.Cancelar.UseVisualStyleBackColor = true;
-            this.Cancelar.Click += new System.EventHandler(this.Cancelar_Click);
             // 
             // Form2
             // 
@@ -647,12 +647,12 @@
         public System.Windows.Forms.MaskedTextBox Validade;
         private System.Windows.Forms.Button NovoProduto;
         public System.Windows.Forms.Button ExcluirProduto;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
         public System.Windows.Forms.Label Id;
         private System.Windows.Forms.Panel painelPesquisa;
         public System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button CancelarSelecao;
         public System.Windows.Forms.Button selecionar;
         public System.Windows.Forms.Button Cancelar;
+        public System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

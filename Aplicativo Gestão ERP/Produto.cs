@@ -35,7 +35,6 @@ namespace Aplicativo_Gestão_ERP
             this.precoCusto = precoCusto;
             this.precoVenda = precoVenda;
         }
-
         public void RegistraProduto()
         {
             CadastraProduto cadastro = new CadastraProduto(nome, marca, especie, peso, quantidade, validade, dataEntrada, dataSaida, precoCusto, precoVenda);
